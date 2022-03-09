@@ -12,7 +12,7 @@ async function handler(req: Request): Promise<Response> {
 
   switch(path){
     case '/':
-      tr = true, rb = await file("./index.html"), ct = "text/html; charset=UTF-8";
+      tr = true, rb = await file("./src/index.html"), ct = "text/html; charset=UTF-8";
       break;
     
     case route('/info/.'):
