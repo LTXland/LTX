@@ -85,14 +85,14 @@ async function handler(req: Request): Promise<Response> {
 
           @media only screen and (max-width: 600px) {
             html {
-              padding-left: 2rem;
-              padding-right: 2rem;
-              padding-bottom: 2rem;
+              padding-left: 0.75rem;
+              padding-right: 0.75rem;
+              padding-bottom: 0.75rem;
             }
             body {
               background: #101010;
               text-align: justify;
-              font-size: 1.5rem;
+              font-size: 1.25rem;
             }
             h1 {
               color: #f0f0f0;
@@ -120,7 +120,7 @@ async function handler(req: Request): Promise<Response> {
             p, ul, ol, table, body {
               color: #c4c4c4;
               font-family: Inter;
-              font-size: 1.5rem;
+              font-size: 1.25rem;
             }
     
             table {
@@ -132,12 +132,12 @@ async function handler(req: Request): Promise<Response> {
               margin: 2px 10px;
               padding: 2px 10px;
               font-family: Inter;
-              font-size: 1.5rem;
+              font-size: 1.25rem;
             }
     
             code {
               color: #e0e0e0;
-              font-size: 1.5rem;
+              font-size: 1.25rem;
             }
     
             a { 
