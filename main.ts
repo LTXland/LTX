@@ -22,7 +22,7 @@ async function handler(req: Request): Promise<Response> {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter&display=swap" rel="stylesheet">
       <style>
-        @media only screen and (max-width: 600px) {
+        @media only screen and (min-width: 600px) {
           html {
             padding-left: 2rem;
             padding-right: 2rem;
@@ -81,7 +81,7 @@ async function handler(req: Request): Promise<Response> {
           }
         }
 
-        @media only screen and (min-width: 600px) {
+        @media only screen and (max-width: 600px) {
           html {
             padding-left: 2rem;
             padding-right: 2rem;
