@@ -7,5 +7,5 @@ const App = {
   
 import Crate from "https://crate.land/mod";
   
-let crate = new Crate();
+const crate = new Crate();
 crate.serve(App);
