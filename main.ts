@@ -1,8 +1,11 @@
 // deno-lint-ignore-file no-case-declarations
-import { serve } from "https://deno.land/std@0.128.0/http/server.ts";
+import { serve, ConnInfo } from "https://deno.land/std@0.128.0/http/server.ts";
 import { Marked } from "https://deno.land/x/markdown@v2.0.0/mod.ts";
+import { createReporter } from "https://deno.land/x/g_a@0.1.2/mod.ts";
 
-async function handler(req: Request): Promise<Response> {
+const ga = createReporter();
+
+async function handler(req: Request, conn: ConnInfo): Promise<Response> {
   const url = new URL(req.url);
   const path = url.pathname, _params = new URLSearchParams(url.search);
   const route = (route:string) => { const regexRoute = new RegExp(route, "gmi"); if(regexRoute.test(path)){ return path } else { return null }}
@@ -160,10 +163,11 @@ async function handler(req: Request): Promise<Response> {
 
   if(tr){
     res = new Response(rb, { headers: { "content-type": ct } });
+    ga(req, conn, res!, performance.now());
   } else {
     res = Response.redirect(rb, 302);
   }
-  return res;
+  return res!;
 }
 
 await serve(handler);
