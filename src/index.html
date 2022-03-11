@@ -6,8 +6,8 @@
 
     <title>LTX — your one stop shop for everything space</title>
 
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/logo.svg" type="image/svg+xml">
+    <!-- <link rel="icon" href="/bin/favicon.ico" sizes="any"> -->
+    <link rel="icon" href="/bin/logo.svg" type="image/svg+xml">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,8 +63,6 @@
         #logo {
             user-select: none;
 
-            height: 50%;
-
             position: absolute;
             top: 50%;
             left: 1.25em;
@@ -73,8 +71,6 @@
 
         #menu-toggle {
             user-select: none;
-
-            height: 15%;
 
             position: absolute;
             top: 50%;
@@ -117,6 +113,8 @@
         }
 
         #menu-content a {
+            user-select: none;
+            
             text-decoration: none;
             color: #f0f0f0;
             font-size: var(--menu-link);
@@ -134,30 +132,210 @@
             color: #ff9a51;
         }
 
+        .menu-content-bottom {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .content-bg-starship {
+            user-select: none;
+
+            opacity: 25%;
+
+            position: fixed;
+            width: 125%;
+            top: 50%;
+            left: 95%;
+
+            transform: translate(-50%, -50%) rotate(-15deg);
+
+            animation-duration: 15s;
+            animation-name: starship;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes starship {
+            0% {
+                transform: translate(-50%, -50%) rotate(-15deg);
+            }
+
+            25% {
+                transform: translate(-50%, -50%) rotate(-13deg);
+            }
+
+            75% {
+                transform: translate(-50%, -50%) rotate(-16deg);
+            }
+        }
+
+        .content-info {
+            width: calc(100% - 3rem);
+
+            position: relative;
+            top: calc(50% - (1/12 * 100%));
+            left: 2rem;
+            transform: translateY(-50%);
+        }
+
+        .content-catchphrase {
+            user-select: none;
+
+            width: max-content;
+            max-width: 75%;
+            font-family: Archivo;
+
+            font-size: var(--content-catchphrase);
+
+            background: linear-gradient(91.61deg, #ffe351 0.03%, #ff9a51 45.22%, #b77eff 99.73%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .content-description {
+            user-select: none;
+
+            width: 65%;
+            font-family: Inter;
+
+            font-size: var(--content-description);
+
+            color: #e0e0e0;
+        }
+
+        .content-buttons {
+            margin-top: 1rem;
+        }
+
+        .content-buttons-wiki {
+            background-color: #151515;
+            width: max-content;
+            padding-left: var(--content-description);
+            padding-right: var(--content-description);
+            padding-top: calc(var(--content-description) / 2);
+            padding-bottom: calc(var(--content-description) / 2);
+
+            margin-right: 0.5rem;
+            
+            border: 3px solid #212121;
+            border-radius: 5px;
+
+            color: #f0f0f0;
+            font-family: Roboto Mono;
+            font-size: var(--content-description);
+
+            user-select: none;
+
+            cursor: pointer;
+
+            transition: background-color 150ms ease-in-out, border 150ms ease-in-out;
+        }
+
+        .content-buttons-wiki:hover {
+            background-color: #212121;
+            border: 3px solid #ff9a51;
+        }
+
+        .content-buttons-launches {
+            background-color: #151515;
+            width: max-content;
+            padding-left: var(--content-description);
+            padding-right: var(--content-description);
+            padding-top: calc(var(--content-description) / 2);
+            padding-bottom: calc(var(--content-description) / 2);
+            
+            border: 3px solid #212121;
+            border-radius: 5px;
+
+            color: #f0f0f0;
+            font-family: Roboto Mono;
+            font-size: var(--content-description);
+
+            user-select: none;
+
+            cursor: pointer;
+
+            transition: background-color 150ms ease-in-out, border 150ms ease-in-out;
+        }
+
+        .content-buttons-launches:hover {
+            background-color: #212121;
+            border: 3px solid #ff9a51;
+        }
+
+        #tagline {
+            position: absolute;
+            left: 50%;
+            bottom: 1.25rem;
+            transform: translateX(-50%);
+
+            font-family: Inter;
+            color: #c4c4c4;
+
+            user-select: none;
+        }
+
         @media only screen and (max-width: 600px) {
-            /**/
             :root {
-                --menu-link: 1.75rem;
+                --menu-link: 1.5rem;
+                --content-catchphrase: 2.25rem;
+                --content-description: 1rem;
+            }
+
+            #logo {
+                height: 75%;
+            }
+
+            #menu-toggle {
+                height: 25%;
             }
         }
 
         @media only screen and (min-width: 600px) {
-            /**/
             :root {
                 --menu-link: 2rem;
+                --content-catchphrase: 4.5rem;
+                --content-description: 1.5rem;
             }
+
+            #logo {
+                height: 50%;
+            }
+
+            #menu-toggle {
+                height: 15%;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        br {
+            user-select: none;
+        }
+
+        ::selection {
+            background: #ff9a51;
+            color: #101010;
         }
     </style>
 </head>
 <body>
     <main>
         <div class="header">
-            <img id="logo" src="/logo.svg" draggable="false" />
+            <img id="logo" src="/bin/logo.svg" draggable="false" />
             <div class="menu">
-                <img id="menu-toggle" src="/menu.svg" draggable="false" onclick="toggleMenu()"/>
+                <img id="menu-toggle" src="/bin/menu.svg" draggable="false" onclick="toggleMenu()"/>
                 <div id="menu">
                     <div id="menu-content">
-                        <a href="/wiki">Wiki</a>
+                        <div><a href="/launches">Launches</a></div>
+                        <div><a href="/streams">Streams</a></div>
+                        <div><a href="/wiki">Wiki</a></div>
+                        <div><a href="/about">About</a></div>
+                        <div class="menu-content-bottom"><a href="https://github.com/jordanreger/ltx">Github</a></div>
                     </div>
                 </div>
                 <script>
@@ -169,9 +347,9 @@
                         open = !open;
                         if(open) {
                             if(window.innerWidth <= 600){
-                                menu.style.width = "20rem"
+                                menu.style.width = "12.5rem"
                             } else {
-                                menu.style.width = "25rem"
+                                menu.style.width = "17.5rem"
                             }
                             menu_content.style.visibility = "visible";
                             setTimeout(() => { menu_content.style.opacity = "100%" }, 100);
@@ -185,7 +363,17 @@
             </div>
         </div>
         <div class="content">
-            
+            <img class="content-bg-starship" src="/bin/starship-diagram-back.svg" draggable="false">
+            <div class="content-info">
+                <div class="content-catchphrase">Your one stop shop<br/>for everything space.</div>
+                <div class="content-description">Learn about everything from Mars to rocket engines,<br/>watch a launch from a bunch of different views, and more.</div>
+                <br/>
+                <div class="content-buttons">
+                    <a href="/wiki"><span class="content-buttons-wiki">Wiki</span></a>
+                    <a href="/launches"><span class="content-buttons-launches">Launches</span></a>
+                </div>
+            </div>
+            <div id="tagline">ad astra. built with ♡ by the ltx team. coming soon</div>
         </div>
     </main>
 </body>

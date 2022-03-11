@@ -18,9 +18,17 @@ async function handler(req: Request, conn: ConnInfo): Promise<Response> {
     case '/':
       tr = true, rb = await file("./src/index.html"), ct = "text/html; charset=UTF-8";
       break;
-
+    case '/launches':
+      tr = true, rb = `<a href="/"><- back</a>`, ct = "text/html; charset=UTF-8";
+      break;
+    case '/streams':
+      tr = true, rb = `<a href="/"><- back</a>`, ct = "text/html; charset=UTF-8";
+      break;
+    case '/about':
+      tr = true, rb = `<a href="/"><- back</a>`, ct = "text/html; charset=UTF-8";
+      break;
     case '/wiki':
-      tr = true, rb = "wiki", ct = "text/html; charset=UTF-8";
+      tr = true, rb = `<a href="/"><- back</a>`, ct = "text/html; charset=UTF-8";
       break;
     case route('/wiki/.'):
       const mdPath = path.replace("/docs/", "").replace(".md", "");
@@ -28,11 +36,14 @@ async function handler(req: Request, conn: ConnInfo): Promise<Response> {
       break;
 
     // bin
-    case '/logo.svg':
+    case '/bin/logo.svg':
       tr = true, rb = await file("./bin/logo.svg"), ct = "image/svg+xml";
       break;
-    case '/menu.svg':
+    case '/bin/menu.svg':
       tr = true, rb = await file("./bin/menu.svg"), ct = "image/svg+xml";
+      break;
+    case '/bin/starship-diagram-back.svg':
+      tr = true, rb = await file("./bin/starship-diagram-back.svg"), ct = "image/svg+xml";
       break;
 
     default:
