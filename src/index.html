@@ -1,1 +1,192 @@
-<pre>ltx</pre>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LTX — your one stop shop for everything space</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/logo.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+        main {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            display: grid; 
+            grid-template-columns: 1fr; 
+            grid-template-rows: 1fr 11fr; 
+            gap: 0px 0px; 
+            grid-template-areas: 
+                "header"
+                "content";
+
+
+            background-color: #101010;
+        }
+
+        .header {
+            grid-area: header;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            z-index: 1;
+
+            /* background-color: #212121; */
+        }
+
+        .content {
+            grid-area: content;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            z-index: 0;
+        }
+
+
+        #logo {
+            user-select: none;
+
+            height: 50%;
+
+            position: absolute;
+            top: 50%;
+            left: 1.25em;
+            transform: translateY(-50%);
+        }
+
+        #menu-toggle {
+            user-select: none;
+
+            height: 15%;
+
+            position: absolute;
+            top: 50%;
+            right: 1.25em;
+            transform: translateY(-50%);
+            z-index: 1;
+
+            cursor: pointer;
+        }
+
+        #menu {
+            width: 0rem;
+            height: 100%;
+
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 0;
+
+            background-color: #151515;
+
+            transition: width 250ms ease-in-out;
+        }
+
+        #menu-content {
+            visibility: hidden;
+            opacity: 0%;
+
+            width: calc(100% - (1.25em * 2));
+            height: calc(100% - (1/12 * 100%) - 1.25em);
+
+            position: absolute;
+            top: calc(1/12 * 100%);
+            left: 50%;
+            transform: translateX(-50%);
+
+            transition: opacity 150ms ease-in-out;
+
+            text-align: right;
+        }
+
+        #menu-content a {
+            text-decoration: none;
+            color: #f0f0f0;
+            font-size: var(--menu-link);
+
+            z-index: 2;
+
+            cursor: pointer;
+
+            transition: color 200ms ease-in-out;
+
+            font-family: Roboto Mono;
+        }
+
+        #menu-content a:hover {
+            color: #ff9a51;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /**/
+            :root {
+                --menu-link: 1.75rem;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            /**/
+            :root {
+                --menu-link: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="header">
+            <img id="logo" src="/logo.svg" draggable="false" />
+            <div class="menu">
+                <img id="menu-toggle" src="/menu.svg" draggable="false" onclick="toggleMenu()"/>
+                <div id="menu">
+                    <div id="menu-content">
+                        <a href="/wiki">Wiki</a>
+                    </div>
+                </div>
+                <script>
+                    const menu = document.getElementById("menu");
+                    const menu_content = document.getElementById("menu-content");
+                    let open = false;
+
+                    function toggleMenu() {
+                        open = !open;
+                        if(open) {
+                            if(window.innerWidth <= 600){
+                                menu.style.width = "20rem"
+                            } else {
+                                menu.style.width = "25rem"
+                            }
+                            menu_content.style.visibility = "visible";
+                            setTimeout(() => { menu_content.style.opacity = "100%" }, 100);
+                        } else {
+                            menu.style.width = "0rem";
+                            setTimeout(() => { menu_content.style.visibility = "hidden" }, 150);
+                            menu_content.style.opacity = "0%";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="content">
+            
+        </div>
+    </main>
+</body>
+</html>
