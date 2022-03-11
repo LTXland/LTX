@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>LTX — your one stop shop for everything space</title>
 
@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
 
     <style>
         main {
@@ -183,7 +183,7 @@
 
             width: max-content;
             max-width: 75%;
-            font-family: Archivo;
+            font-family: Archivo Black;
 
             font-size: var(--content-catchphrase);
 
@@ -281,7 +281,7 @@
         @media only screen and (max-width: 600px) {
             :root {
                 --menu-link: 1.5rem;
-                --content-catchphrase: 2.25rem;
+                --content-catchphrase: 2.5rem;
                 --content-description: 1rem;
                 --tagline: 0.65rem;
             }
@@ -298,7 +298,7 @@
         @media only screen and (min-width: 600px) {
             :root {
                 --menu-link: 2rem;
-                --content-catchphrase: 4.5rem;
+                --content-catchphrase: 4rem;
                 --content-description: 1.5rem;
                 --tagline: 1rem;
             }
@@ -356,10 +356,10 @@
                                 menu.style.width = "17.5rem"
                             }
                             menu_content.style.visibility = "visible";
-                            setTimeout(() => { menu_content.style.opacity = "100%" }, 100);
+                            setTimeout(() => { menu_content.style.opacity = "100%" }, 150);
                         } else {
                             menu.style.width = "0rem";
-                            setTimeout(() => { menu_content.style.visibility = "hidden" }, 150);
+                            setTimeout(() => { menu_content.style.visibility = "hidden" }, 50);
                             menu_content.style.opacity = "0%";
                         }
                     }
@@ -373,11 +373,10 @@
                 <div class="content-description">Learn about everything from Mars to rocket engines,<br/>watch a launch from a bunch of different views, and more.</div>
                 <br/>
                 <div class="content-buttons">
-                    <a href="/wiki"><span class="content-buttons-wiki">Wiki</span></a>
-                    <a href="/launches"><span class="content-buttons-launches">Launches</span></a>
+                    <a href="/wiki"><span class="content-buttons-wiki">Wiki</span></a><a href="/launches"><span class="content-buttons-launches">Launches</span></a>
                 </div>
             </div>
-            <div id="tagline">ad astra. built with ♡ by the ltx team. coming soon</div>
+            <div id="tagline">built with ♡ for space. coming soon</div>
         </div>
     </main>
 </body>

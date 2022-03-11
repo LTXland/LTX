@@ -8,7 +8,7 @@ export const md = async (src: string) => {
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
       <style>
         @media only screen and (min-width: 600px) {
           html {
@@ -23,25 +23,25 @@ export const md = async (src: string) => {
           }
           h1 {
             color: #f0f0f0;
-            font-family: Archivo;
+            font-family: Archivo Black;
             font-size: 4rem;
           }
 
           h2 {
             color: #e0e0e0;
-            font-family: Archivo;
+            font-family: Archivo Black;
             font-size: 3rem;
           }
 
           h3 {
             color: #d0d0d0;
-            font-family: Archivo;
+            font-family: Archivo Black;
             font-size: 2rem;
           }
 
           h4, h5, h6 {
             color: #c4c4c4;
-            font-family: Archivo;
+            font-family: Archivo Black;
           }
 
           p, ul, ol, table, body {
@@ -82,25 +82,25 @@ export const md = async (src: string) => {
           }
           h1 {
             color: #f0f0f0;
-            font-family: Archivo;
+            font-family: Archivo Black;
             font-size: 3rem;
           }
   
           h2 {
             color: #e0e0e0;
-            font-family: Archivo;
+            font-family: Archivo Black;
             font-size: 2.5rem;
           }
   
           h3 {
             color: #d0d0d0;
-            font-family: Archivo;
+            font-family: Archivo Black;
             font-size: 1.75rem;
           }
   
           h4, h5, h6 {
             color: #c4c4c4;
-            font-family: Archivo;
+            font-family: Archivo Black;
           }
   
           p, ul, ol, table, body {
