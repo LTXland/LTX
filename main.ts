@@ -28,7 +28,7 @@ async function handler(req: Request, conn: ConnInfo): Promise<Response> {
       tr = true, rb = `<a href="/"><- back</a>`, ct = "text/html; charset=UTF-8";
       break;
     case '/wiki':
-      tr = true, rb = `<a href="/"><- back</a>`, ct = "text/html; charset=UTF-8";
+      tr = true, rb = await file("./src/wiki.html"), ct = "text/html; charset=UTF-8";
       break;
     case route('/wiki/.'):
       const mdPath = path.replace("/wiki/", "").replace(".md", "");

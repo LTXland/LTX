@@ -211,8 +211,12 @@ export const md = async (src: string) => {
         }
 
         a {
-            text-decoration: none;
-            color: inherit;
+          color: inherit;
+          transition: color 100ms ease-in-out;
+        }
+
+        a:hover {
+          color: #ff9a51;
         }
 
         br {
@@ -229,7 +233,7 @@ export const md = async (src: string) => {
             width: calc(100% - 4rem);
             padding-left: 2rem;
             padding-right: 2rem;
-            margin-bottom: 2rem;
+            padding-bottom: 2rem;
           }
           body {
             background: #101010;
@@ -275,12 +279,17 @@ export const md = async (src: string) => {
             font-family: Inter;
           }
 
-          code {
+          code, pre {
             color: #e0e0e0;
+            font-size: 1.25rem;
+            font-family: Roboto Mono;
+            background-color: #151515;
+            padding: 0.25rem;
+            border-radius: 5px;
           }
 
           a { 
-            color: #FF9A51;
+            color: inherit;
           }
         }
 
@@ -289,7 +298,7 @@ export const md = async (src: string) => {
             width: calc(100% - 4rem);
             padding-left: 2rem;
             padding-right: 2rem;
-            margin-bottom: 2rem;
+            padding-bottom: 2rem;
           }
           body {
             background: #101010;
@@ -337,9 +346,13 @@ export const md = async (src: string) => {
             font-size: 1.25rem;
           }
   
-          code {
+          code, pre {
             color: #e0e0e0;
             font-size: 1.25rem;
+            font-family: Roboto Mono;
+            background-color: #151515;
+            padding: 0.25rem;
+            border-radius: 5px;
           }
   
           a { 
