@@ -8,7 +8,7 @@ import { md } from "./src/markdown.ts";
 async function handler(req: Request, conn: ConnInfo): Promise<Response> {
   const url = new URL(req.url);
   const path = url.pathname, _params = new URLSearchParams(url.search);
-  const route = (route:string) => { const regexRoute = new RegExp(route, "gmi"); if(regexRoute.test(path)){ return path } else { return null }}
+  const route = (route:string) => { const regexRoute = new RegExp(route, "gmi"); if(regexRoute.test(path)){ return path } else { return "/404" }}
   const file = async (fp:string) => { const d = new TextDecoder("utf-8"); return d.decode(await Deno.readFile(fp))}
 
   let tr, rb, ct = "";
@@ -28,10 +28,10 @@ async function handler(req: Request, conn: ConnInfo): Promise<Response> {
       tr = true, rb = `<a href="/"><- back</a>`, ct = "text/html; charset=UTF-8";
       break;
     case '/wiki':
-      tr = true, rb = await file("./src/wiki.html"), ct = "text/html; charset=UTF-8";
+      tr = true, rb = md("/src/wiki"), ct = "text/html; charset=UTF-8";
       break;
     case route('/wiki/.'):
-      const mdPath = path.replace("/wiki/", "").replace(".md", "");
+      const mdPath = path.replace(".md", "");
       tr = true, rb = md(mdPath), ct = "text/html; charset=UTF-8";
       break;
 
