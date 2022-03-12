@@ -1,9 +1,5 @@
 # LTX
-<img src="https://img.shields.io/github/license/jordanreger/ltx?color=ff9a51">
-<img src="https://img.shields.io/github/stars/jordanreger/ltx?color=ff9a51">
-<img src="https://img.shields.io/github/issues/jordanreger/ltx?color=ff9a51">
-<img src="https://img.shields.io/github/commit-activity/m/jordanreger/ltx?color=ff9a51">
-<img src="https://img.shields.io/tokei/lines/github/jordanreger/ltx?color=ff9a51">
+<img src="https://img.shields.io/github/license/jordanreger/ltx?color=ff9a51"> <img src="https://img.shields.io/github/stars/jordanreger/ltx?color=ff9a51"> <img src="https://img.shields.io/github/issues/jordanreger/ltx?color=ff9a51"> <img src="https://img.shields.io/github/commit-activity/m/jordanreger/ltx?color=ff9a51"> <img src="https://img.shields.io/tokei/lines/github/jordanreger/ltx?color=ff9a51">
 
 <img align="right" src="https://ltx.deno.dev/bin/logo.svg" height="150px" alt="ltx logo">
 
