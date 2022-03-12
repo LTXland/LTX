@@ -129,7 +129,7 @@
             z-index: 1;
 
             background-color: #151515;
-            border-left: 3px solid #212121;
+            border-left: -3px solid #212121;
 
             transition: width 250ms ease-in-out;
         }
@@ -220,7 +220,7 @@
             user-select: none;
 
             width: max-content;
-            max-width: 75%;
+            max-width: 100%;
             font-family: Archivo Black;
 
             font-size: var(--content-catchphrase);
@@ -256,7 +256,7 @@
         .content-description {
             user-select: none;
 
-            width: 65%;
+            max-width: 85%;
             font-family: Inter;
 
             font-size: var(--content-description);
@@ -347,7 +347,7 @@
             }
 
             #logo {
-                height: 75%;
+                height: 65%;
             }
 
             #menu-toggle {
@@ -355,7 +355,7 @@
             }
         }
 
-        @media only screen and (orientation: portrait) and (max-width: 600px) {
+        @media only screen and (orientation: portrait) and (max-width: 1000px) {
             :root {
                 --menu-link: 1.75rem;
                 --content-catchphrase: 2.5rem;
@@ -364,7 +364,7 @@
             }
 
             #logo {
-                height: 75%;
+                height: 65%;
             }
 
             #menu-toggle {
