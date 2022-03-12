@@ -32,7 +32,12 @@
 
     <style>
         html {
-            background-color: #101010;
+            background: linear-gradient(90deg, #ffe351 0.03%, #ff9a51 45.22%, #b77eff 99.73%);
+            background-size: 150% 150%;
+
+            -webkit-animation: flame-gradient 5s ease infinite;
+            -moz-animation: flame-gradient 5s ease infinite;
+            animation: flame-gradient 5s ease infinite;
         }
 
         main {
@@ -41,7 +46,6 @@
             top: 0;
             width: 100vw !important;
             min-height: 100vh;
-            padding: env(safe-area-inset);
 
             display: grid; 
             grid-template-columns: 1fr; 
@@ -66,7 +70,7 @@
 
             z-index: 1;
 
-            /* background-color: #212121; */
+            background-color: #101010;
         }
 
         .content {
