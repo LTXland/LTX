@@ -19,13 +19,13 @@ async function handler(req: Request, conn: ConnInfo): Promise<Response> {
       tr = true, rb = await file("./src/index.html"), ct = "text/html; charset=UTF-8";
       break;
     case '/launches':
-      tr = true, rb = `<a href="/"><- back</a>`, ct = "text/html; charset=UTF-8";
+      tr = true, rb = md("/src/launches"), ct = "text/html; charset=UTF-8";
       break;
     case '/streams':
-      tr = true, rb = `<a href="/"><- back</a>`, ct = "text/html; charset=UTF-8";
+      tr = true, rb = md("/src/streams"), ct = "text/html; charset=UTF-8";
       break;
     case '/about':
-      tr = true, rb = `<a href="/"><- back</a>`, ct = "text/html; charset=UTF-8";
+      tr = true, rb = md("/src/about"), ct = "text/html; charset=UTF-8";
       break;
     case '/wiki':
       tr = true, rb = md("/src/wiki"), ct = "text/html; charset=UTF-8";
