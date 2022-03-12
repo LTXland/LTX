@@ -288,8 +288,8 @@ export const md = async (src: string) => {
             border-radius: 5px;
           }
 
-          a { 
-            color: inherit;
+          img {
+            max-width: calc(100% - 4rem);
           }
         }
 
@@ -354,9 +354,9 @@ export const md = async (src: string) => {
             padding: 0.25rem;
             border-radius: 5px;
           }
-  
-          a { 
-            color: #FF9A51;
+
+          img {
+            max-width: calc(100% - 4rem);
           }
         }
       </style>
