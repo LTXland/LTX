@@ -338,7 +338,7 @@
             user-select: none;
         }
 
-        @media only screen and (max-width: 600px) {
+        @media only screen and (orientation: landscape) and (max-width: 1000px) {
             :root {
                 --menu-link: 1.75rem;
                 --content-catchphrase: 2.5rem;
@@ -355,7 +355,24 @@
             }
         }
 
-        @media only screen and (min-width: 600px) {
+        @media only screen and (orientation: portrait) and (max-width: 600px) {
+            :root {
+                --menu-link: 1.75rem;
+                --content-catchphrase: 2.5rem;
+                --content-description: 1rem;
+                --tagline: 0.65rem;
+            }
+
+            #logo {
+                height: 75%;
+            }
+
+            #menu-toggle {
+                height: 25%;
+            }
+        }
+
+        @media only screen and (orientation: landscape) and (min-width: 1000px) {
             :root {
                 --menu-link: 1.75rem;
                 --content-catchphrase: 4rem;
