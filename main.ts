@@ -45,6 +45,9 @@ async function handler(req: Request, conn: ConnInfo): Promise<Response> {
     case '/bin/starship-diagram-back.svg':
       tr = true, rb = await file("./bin/starship-diagram-back.svg"), ct = "image/svg+xml";
       break;
+    case '/bin/cover.svg':
+      tr = true, rb = await file("./bin/cover.svg"), ct = "image/svg+xml";
+      break;
 
     default:
       tr = true, rb = "404", ct = "text/html; charset=UTF-8";
