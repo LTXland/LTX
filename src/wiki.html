@@ -313,12 +313,19 @@
             </div>
         </div>
         <div class="content">
-            <div class="content-header">
+            <!-- <div class="content-header">
                 <div class="content-header-content">
                     <div class="content-header-content-title">Wiki</div>
                     <br/>
                     <div class="content-header-content-description">Learn about everything from Mars to SpaceX's special alloy. All of it is community-contributed, and you can help! <a href="/wiki/contribute">Read the guide</a>.</div>
-            </div>
+            </div> -->
+            <script>
+                const div = document.getElementById("dimensions");
+                window.onload = function() {
+                    dimensions.innerHTML = `${window.innerWidth}x${window.innerHeight}`;
+                }
+            </script>
+            <div id="dimensions" style="color: #f0f0f0"></div>
         </div>
     </main>
 </body>

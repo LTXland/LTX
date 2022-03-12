@@ -33,200 +33,377 @@ export const md = async (src: string) => {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
       <style>
-        html {
-            background-color: #101010;
-        }
+      html {
+        background-color: #101010;
+      }
 
-        main {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
+      main {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100% !important;
+          min-height: 100%;
 
-            display: grid; 
-            grid-template-columns: 1fr; 
-            grid-template-rows: 1fr 11fr; 
-            gap: 0px 0px; 
-            grid-template-areas: 
-                "header"
-                "content";
-
-
-            background-color: #101010;
-        }
-
-        .header {
-            grid-area: header;
-
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-
-            z-index: 1;
-
-            /* background-color: #212121; */
-        }
-
-        .content {
-            grid-area: content;
-
-            position: absolute;
-            left: 0;
-            top: 0;
-
-            z-index: 0;
-        }
+          display: grid; 
+          grid-template-columns: 1fr; 
+          grid-template-rows: 1fr 11fr; 
+          gap: 0px 0px; 
+          grid-template-areas: 
+              "header"
+              "content";
 
 
-        #logo {
-            user-select: none;
+          background-color: #101010;
+      }
 
-            position: absolute;
-            top: 50%;
-            left: 1.25rem;
-            transform: translateY(-50%);
-        }
+      .header {
+          grid-area: header;
 
-        #menu-toggle {
-            user-select: none;
+          position: sticky;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
 
-            position: absolute;
-            top: 50%;
-            right: 1.25rem;
-            transform: translateY(-50%);
-            z-index: 2;
+          z-index: 1;
 
-            cursor: pointer;
-        }
+          /* background-color: #101010; */
+      }
 
-        #menu-close {
-            visibility: hidden;
+      .content {
+          grid-area: content;
 
-            opacity: 0%;
-            transition: opacity 150ms ease-in-out;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
 
-            width: 100%;
-            height: 100%;
+          z-index: 0;
+      }
 
-            position: fixed;
-            left: 0;
-            top: 0;
-            z-index: 0;
 
-            background-color: rgba(0, 0, 0, 0.35);
-        }
+      #logo {
+          user-select: none;
 
-        #menu {
-            width: 0rem;
-            height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 1.25rem;
+          transform: translateY(-50%);
+      }
 
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 1;
+      #menu-toggle {
+          user-select: none;
 
-            background-color: #151515;
-            border-left: 3px solid #212121;
+          position: absolute;
+          top: 50%;
+          right: 1.25rem;
+          transform: translateY(-50%);
+          z-index: 2;
 
-            transition: width 250ms ease-in-out;
-        }
+          cursor: pointer;
+      }
 
-        #menu-content {
-            visibility: hidden;
-            opacity: 0%;
-            transition: opacity 150ms ease-in-out;
+      #menu-close {
+          visibility: hidden;
 
-            width: calc(100% - (1.25em * 2));
-            height: calc(100% - (1/12 * 100%) - 1.25em);
+          opacity: 0%;
+          transition: opacity 150ms ease-in-out;
 
-            position: absolute;
-            top: calc(1/12 * 100%);
-            left: 50%;
-            transform: translateX(-50%);
+          width: 100%;
+          height: 100%;
 
-            text-align: right;
-        }
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 0;
 
-        #menu-content a {
-            user-select: none;
-            
-            text-decoration: none;
-            color: #f0f0f0;
-            font-size: var(--menu-link);
+          background-color: rgba(0, 0, 0, 0.35);
+      }
 
-            z-index: 2;
+      #menu {
+          width: 0rem;
+          height: 100%;
 
-            cursor: pointer;
+          position: fixed;
+          top: 0;
+          right: 0;
+          z-index: 1;
 
-            transition: color 200ms ease-in-out;
+          background-color: #151515;
+          border-left: -3px solid #212121;
 
-            font-family: Roboto Mono;
-        }
+          transition: width 250ms ease-in-out;
+      }
 
-        #menu-content a:hover {
-            color: #ff9a51;
-        }
+      #menu-content {
+          visibility: hidden;
+          opacity: 0%;
+          transition: opacity 150ms ease-in-out;
 
-        .menu-content-bottom {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-        }
+          width: calc(100% - (1.25em * 2));
+          height: calc(100% - (1/12 * 100%) - 1.25em);
 
-        @media only screen and (max-width: 600px) {
-            :root {
-                --menu-link: 1.75rem;
-                --content-catchphrase: 2.5rem;
-                --content-description: 1rem;
-                --tagline: 0.65rem;
-            }
+          position: absolute;
+          top: calc(1/12 * 100%);
+          left: 50%;
+          transform: translateX(-50%);
 
-            #logo {
-                height: 75%;
-            }
+          text-align: right;
+      }
 
-            #menu-toggle {
-                height: 25%;
-            }
-        }
+      #menu-content a {
+          user-select: none;
+          
+          text-decoration: none;
+          color: #f0f0f0;
+          font-size: var(--menu-link);
 
-        @media only screen and (min-width: 600px) {
-            :root {
-                --menu-link: 1.75rem;
-                --content-catchphrase: 4rem;
-                --content-description: 1.5rem;
-                --tagline: 1rem;
-            }
+          z-index: 2;
 
-            #logo {
-                height: 50%;
-            }
+          cursor: pointer;
 
-            #menu-toggle {
-                height: 15%;
-            }
-        }
+          transition: color 200ms ease-in-out;
 
-        a {
-          color: inherit;
-          transition: color 100ms ease-in-out;
-        }
+          font-family: Roboto Mono;
+      }
 
-        a:hover {
+      #menu-content a:hover {
           color: #ff9a51;
-        }
+      }
 
-        br {
-            user-select: none;
-        }
+      .menu-content-bottom {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+      }
 
-        ::selection {
-            background: #ff9a51;
-            color: #101010;
-        }
+      .content-bg-starship {
+          user-select: none;
+
+          opacity: 25%;
+
+          position: fixed;
+          width: 125%;
+          top: 50%;
+          left: 95%;
+
+          transform: translate(-50%, -50%) rotate(-15deg);
+
+          animation-duration: 15s;
+          animation-name: starship;
+          animation-iteration-count: infinite;
+      }
+
+      @keyframes starship {
+          0% {
+              transform: translate(-50%, -50%) rotate(-15deg);
+          }
+
+          25% {
+              transform: translate(-50%, -50%) rotate(-12deg);
+          }
+
+          75% {
+              transform: translate(-50%, -50%) rotate(-17deg);
+          }
+      }
+
+      .content-info {
+          width: calc(100% - 3rem);
+
+          position: relative;
+          top: calc(50% - (1/12 * 100%));
+          left: 2rem;
+          transform: translateY(-50%);
+      }
+
+      .content-catchphrase {
+          user-select: none;
+
+          width: max-content;
+          max-width: 100%;
+          font-family: Archivo Black;
+
+          font-size: var(--content-catchphrase);
+
+          background: linear-gradient(90deg, #ffe351 0.03%, #ff9a51 45.22%, #b77eff 99.73%);
+          background-size: 150% 150%;
+
+          -webkit-animation: flame-gradient 5s ease infinite;
+          -moz-animation: flame-gradient 5s ease infinite;
+          animation: flame-gradient 5s ease infinite;
+          
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+      }
+
+      @-webkit-keyframes flame-gradient {
+          0%{background-position:0% 50%}
+          50%{background-position:100% 50%}
+          100%{background-position:0% 50%}
+      }
+      @-moz-keyframes flame-gradient {
+          0%{background-position:0% 50%}
+          50%{background-position:100% 50%}
+          100%{background-position:0% 50%}
+      }
+      @keyframes flame-gradient {
+          0%{background-position:0% 50%}
+          50%{background-position:100% 50%}
+          100%{background-position:0% 50%}
+      }
+
+      .content-description {
+          user-select: none;
+
+          max-width: 85%;
+          font-family: Inter;
+
+          font-size: var(--content-description);
+
+          color: #e0e0e0;
+      }
+
+      .content-buttons {
+          margin-top: 1rem;
+      }
+
+      .content-buttons-wiki {
+          background-color: #151515;
+          width: max-content;
+          padding-left: var(--content-description);
+          padding-right: var(--content-description);
+          padding-top: calc(var(--content-description) / 2);
+          padding-bottom: calc(var(--content-description) / 2);
+
+          margin-right: 0.5rem;
+          
+          border: 3px solid #212121;
+          border-radius: 5px;
+
+          color: #f0f0f0;
+          font-family: Roboto Mono;
+          font-size: var(--content-description);
+
+          user-select: none;
+
+          cursor: pointer;
+
+          transition: background-color 150ms ease-in-out, border 150ms ease-in-out;
+      }
+
+      .content-buttons-wiki:hover {
+          background-color: #212121;
+          border: 3px solid #ff9a51;
+      }
+
+      .content-buttons-launches {
+          background-color: #151515;
+          width: max-content;
+          padding-left: var(--content-description);
+          padding-right: var(--content-description);
+          padding-top: calc(var(--content-description) / 2);
+          padding-bottom: calc(var(--content-description) / 2);
+          
+          border: 3px solid #212121;
+          border-radius: 5px;
+
+          color: #f0f0f0;
+          font-family: Roboto Mono;
+          font-size: var(--content-description);
+
+          user-select: none;
+
+          cursor: pointer;
+
+          transition: background-color 150ms ease-in-out, border 150ms ease-in-out;
+      }
+
+      .content-buttons-launches:hover {
+          background-color: #212121;
+          border: 3px solid #ff9a51;
+      }
+
+      #tagline {
+          position: absolute;
+          left: 50%;
+          bottom: 1.25rem;
+          transform: translateX(-50%);
+
+          font-family: Inter;
+          color: #c4c4c4;
+          font-size: var(--tagline);
+          width: max-content;
+
+          user-select: none;
+      }
+
+      @media only screen and (orientation: landscape) and (max-width: 1000px) {
+          :root {
+              --menu-link: 1.75rem;
+              --content-catchphrase: 2.5rem;
+              --content-description: 1rem;
+              --tagline: 0.65rem;
+          }
+
+          #logo {
+              height: 65%;
+          }
+
+          #menu-toggle {
+              height: 25%;
+          }
+      }
+
+      @media only screen and (orientation: portrait) and (max-width: 1000px) {
+          :root {
+              --menu-link: 1.75rem;
+              --content-catchphrase: 2.5rem;
+              --content-description: 1rem;
+              --tagline: 0.65rem;
+          }
+
+          #logo {
+              height: 65%;
+          }
+
+          #menu-toggle {
+              height: 25%;
+          }
+      }
+
+      @media only screen and (orientation: landscape) and (min-width: 1000px) {
+          :root {
+              --menu-link: 1.75rem;
+              --content-catchphrase: 4rem;
+              --content-description: 1.5rem;
+              --tagline: 1rem;
+          }
+
+          #logo {
+              height: 50%;
+          }
+
+          #menu-toggle {
+              height: 15%;
+          }
+      }
+
+      a {
+          text-decoration: none;
+          color: inherit;
+      }
+
+      br {
+          user-select: none;
+      }
+
+      ::selection {
+          background: #ff9a51;
+          color: #101010;
+      }
 
         @media only screen and (min-width: 600px) {
           .content {
