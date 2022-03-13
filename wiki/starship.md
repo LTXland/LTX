@@ -1,14 +1,34 @@
-<p align="center">
-	<a href="https://example.com/">
-		<img src="https://static.independent.co.uk/2021/12/07/10/spacex%20launch%20starship%20date.jpg?width=1200" alt="Logo" height="250">
-	</a>
-	<h1>Starship</h1>
-	<p>
-		SpaceX’s Starship spacecraft and Super Heavy rocket (collectively referred to as Starship) represent a fully reusable transportation system designed to carry both crew and cargo to Earth orbit, the Moon, Mars and beyond.
-	</p>
-</p>
+<header align="center">
+	<h2 align="left">SpaceX Starship</h2>
+	<hr/>
+	<br/>
+	<a href="https://www.flickr.com/photos/spacex/51171019709"><img src="https://live.staticflickr.com/65535/51171019709_972fb29eb6_b.jpg" alt="Starship SN15 High-Altitude Flight Test" title="Starship SN15 High-Altitude Flight Test"></a>
+	<style>
+		header img {
+			width: 100%;
+		}
+	</style>
+</header>
 
-<br>
+<br/>
 
-<h1>Engines</h1>
-Starship has engines.
+### Overview
+
+SpaceX's Starship launch system consists of Starship (the spacecraft) and Super Heavy (the booster). Together this system is referred to as Starship. It is a fully reusable rocket, while still being able to transport 100+ tons to low Earth orbit (LEO).
+
+| Height | Diameter | Payload to LEO |
+| :----: | :------: | :------------: |
+| 120m / 394ft | 9m / 30ft | 100+t / 220+ klb |
+
+(<a href="https://www.spacex.com/vehicles/starship">spacex.com</a>)
+
+<br/>
+
+### Engines
+#### Starship
+Starship has 3 sea level Raptor engines and 6 RVac (Raptor Vacuum) engines onboard.
+
+#### Super Heavy
+Superheavy has 33 sea level Raptor engines onboard.
+
+<br/>

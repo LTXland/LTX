@@ -85,9 +85,7 @@ export const md = async (src: string) => {
           z-index: 0;
 
           overflow-y: scroll;
-          padding-bottom: 2rem;
       }
-
 
       #logo {
           user-select: none;
@@ -184,6 +182,12 @@ export const md = async (src: string) => {
           bottom: 0;
       }
 
+      hr {
+        border: none;
+        height: 3px;
+        background: #212121;
+      }
+
       @media only screen and (orientation: landscape) and (max-width: 1000px) {
           :root {
               --menu-link: 1.75rem;
@@ -204,7 +208,6 @@ export const md = async (src: string) => {
             width: calc(100% - 4rem);
             padding-left: 2rem;
             padding-right: 2rem;
-            padding-bottom: 2rem;
           }
           body {
             background: #101010;
@@ -241,6 +244,7 @@ export const md = async (src: string) => {
 
           table {
             border-color: #212121;
+            width: 100%;
           }
 
           blockquote {
@@ -284,7 +288,6 @@ export const md = async (src: string) => {
             width: calc(100% - 4rem);
             padding-left: 2rem;
             padding-right: 2rem;
-            padding-bottom: 2rem;
           }
           body {
             background: #101010;
@@ -321,6 +324,7 @@ export const md = async (src: string) => {
 
           table {
             border-color: #212121;
+            width: 100%;
           }
 
           blockquote {
@@ -364,7 +368,6 @@ export const md = async (src: string) => {
             width: calc(100% - 4rem);
             padding-left: 2rem;
             padding-right: 2rem;
-            padding-bottom: 2rem;
           }
           body {
             background: #101010;
@@ -402,6 +405,7 @@ export const md = async (src: string) => {
           table {
             border-color: #212121;
             font-size: 1.25rem;
+            width: 100%;
           }
 
           blockquote {
