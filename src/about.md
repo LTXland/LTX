@@ -8,5 +8,7 @@ Per aspera ad astra.
 # Github
 Check out the Github repo at <a href="https://github.com/jordanreger/ltx">github.com/jordanreger/ltx</a>.
 
+<iframe src="https://github.com/sponsors/jordanreger/button" title="Sponsor jordanreger" height="35" width="116" style="border: 0;" style="background-color: #101010"></iframe>
+
 # Contribute
 Take a look at the <a href="https://github.com/jordanreger/ltx#contribute">contribution guide</a>!
