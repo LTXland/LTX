@@ -121,94 +121,26 @@
             }
         }
 
-        .content-info {
-            width: calc(100% - 3rem);
 
-            position: relative;
+        .search-bar {
+            position: absolute;
+            left: 50%;
             top: calc(50% - (1/12 * 100%));
-            left: 2rem;
-            transform: translateY(-50%);
+            transform: translate(-50%, -50%);
+            height: min-content;
         }
 
-        .content-catchphrase {
-            user-select: none;
-
-            width: max-content;
-            max-width: 100%;
+        .search-bar .title {
             font-family: Archivo Black;
-
-            font-size: var(--content-catchphrase);
-
-            background: linear-gradient(90deg, #ffe351 0.03%, #ff9a51 45.22%, #b77eff 99.73%);
-            background-size: 150% 150%;
-
-            -webkit-animation: flame-gradient 5s ease infinite;
-            -moz-animation: flame-gradient 5s ease infinite;
-            animation: flame-gradient 5s ease infinite;
-            
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        @-webkit-keyframes flame-gradient {
-            0%{background-position:0% 50%}
-            50%{background-position:100% 50%}
-            100%{background-position:0% 50%}
-        }
-        @-moz-keyframes flame-gradient {
-            0%{background-position:0% 50%}
-            50%{background-position:100% 50%}
-            100%{background-position:0% 50%}
-        }
-        @keyframes flame-gradient {
-            0%{background-position:0% 50%}
-            50%{background-position:100% 50%}
-            100%{background-position:0% 50%}
-        }
-
-        .content-description {
-            user-select: none;
-
-            max-width: 85%;
-            font-family: Inter;
-
-            font-size: var(--content-description);
-
-            color: #e0e0e0;
-        }
-
-        .content-buttons {
-            margin-top: 1rem;
-        }
-
-        .content-buttons-wiki {
-            background-color: #151515;
-            width: max-content;
-            padding-left: var(--content-description);
-            padding-right: var(--content-description);
-            padding-top: calc(var(--content-description) / 2);
-            padding-bottom: calc(var(--content-description) / 2);
-
-            margin-right: 0.5rem;
-            
-            border: 3px solid #212121;
-            border-radius: 5px;
-
             color: #f0f0f0;
-            font-family: Roboto Mono;
-            font-size: var(--content-description);
-
-            user-select: none;
-
-            cursor: pointer;
-
-            transition: background-color 150ms ease-in-out, border 150ms ease-in-out;
+            font-size: var(--content-catchphrase);
         }
 
-        .content-buttons-wiki:hover {
-            background-color: #212121;
-            border: 3px solid #ff9a51;
+        .search-bar .subtitle {
+            font-family: Inter;
+            color: #c4c4c4;
+
+            margin-bottom: 1.25rem;
         }
 
         .content-buttons-launches {
@@ -262,6 +194,10 @@
             #logo {
                 height: 65%;
             }
+
+            .search-bar {
+                width: 75%;
+            }
         }
 
         @media only screen and (orientation: portrait) and (max-width: 1000px) {
@@ -274,6 +210,10 @@
             #logo {
                 height: 65%;
             }
+
+            .search-bar {
+                width: 85%;
+            }
         }
 
         @media only screen and (orientation: landscape) and (min-width: 1000px) {
@@ -285,6 +225,10 @@
 
             #logo {
                 height: 50%;
+            }
+
+            .search-bar {
+                width: 65%;
             }
         }
 
@@ -321,18 +265,25 @@
     </style>
 
     <link rel="modulepreload" href="/src/components/menu.mjs">
+    <link rel="modulepreload" href="/src/components/searchbar.mjs">
 </head>
 <body>
     <main>
         <div class="header">
-            <img id="logo" src="/bin/logo.svg" draggable="false" />
+            <a href="/"><img id="logo" src="/bin/logo.svg" draggable="false" /></a>
             <ltx-menu></ltx-menu>
         </div>
         <div class="content">
-            wiki
+            <img class="content-bg-starship" src="/bin/starship-diagram-back.svg" draggable="false">
+            <div class="search-bar">
+                <div class="title">LTX Wiki</div>
+                <div class="subtitle">Welcome to the LTX Wiki! Here you can learn about everything from Mars to SpaceX's special alloy. Search our extensive collection below!</div>
+                <wiki-searchbar></wiki-searchbar>
+            </div>
         </div>
     </main>
 
     <script src="/src/components/menu.mjs" type="module"></script>
+    <script src="/src/components/searchbar.mjs" type="module"></script>
 </body>
 </html>

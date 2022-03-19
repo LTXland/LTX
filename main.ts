@@ -37,6 +37,9 @@ async function handler(req: Request): Promise<Response> {
     case '/src/components/menu.mjs':
       tr = true, rb = await file("./src/components/menu.mjs"), ct = "text/javascript";
       break;
+    case '/src/components/searchbar.mjs':
+      tr = true, rb = await file("./src/components/searchbar.mjs"), ct = "text/javascript";
+      break;
 
     // bin
     case '/bin/logo.svg':
