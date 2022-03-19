@@ -264,7 +264,7 @@ export const md = async (src: string) => {
           }
 
           img {
-            max-width: calc(100% - 4rem);
+            max-width: calc(75% - 4rem);
           }
       }
 
@@ -425,7 +425,7 @@ export const md = async (src: string) => {
           }
 
           img {
-            max-width: calc(100% - 4rem);
+            max-width: calc(35% - 4rem);
           }
       }
 
