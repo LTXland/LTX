@@ -26,7 +26,7 @@ async function handler(req: Request): Promise<Response> {
       tr = true, rb = md("/src/about"), ct = "text/html; charset=UTF-8";
       break;
     case '/wiki':
-      tr = true, rb = md("/src/wiki"), ct = "text/html; charset=UTF-8";
+      tr = true, rb = await file("./src/wiki.html"), ct = "text/html; charset=UTF-8";
       break;
     case route('/wiki/.'):
       const mdPath = path.replace(".md", "");
@@ -53,6 +53,14 @@ async function handler(req: Request): Promise<Response> {
       break;
     case '/bin/cover.svg':
       tr = true, rb = await file("./bin/cover.svg"), ct = "image/svg+xml";
+      break;
+
+    case '/dev':
+      const deployment_link = Deno.env.get("DENO_DEPLOYMENT_ID") ? `-${Deno.env.get("DENO_DEPLOYMENT_ID")}` : "",
+      deployment_name = Deno.env.get("DENO_DEPLOYMENT_ID") ? `-${Deno.env.get("DENO_DEPLOYMENT_ID")}` : "dev",
+      deployment_region = Deno.env.get("DENO_DEPLOYMENT_ID") ? Deno.env.get("DENO_REGION") : "dev",
+      github_sha = await fetch("https://api.github.com/repos/jordanreger/ltx/commits").then(res => res.json()).then((res) => { return res[0].sha });
+      tr = true, rb = `DEPLOY: <a href="https://ltx${deployment_link}.deno.dev">${deployment_name}</a><br/>REGION: ${deployment_region}<br/>LATEST_COMMIT: <a href="https://github.com/jordanreger/ltx/commit/${github_sha}">${github_sha}</a>`, ct = "text/html; charset=UTF-8";
       break;
 
     default:
