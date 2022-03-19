@@ -3,6 +3,10 @@ let LitElement, html, css;
 import("https://esm.sh/lit").then(ex => {
     LitElement = ex.LitElement, html = ex.html, css = ex.css;
     class Menu extends LitElement {
+        static properties = {
+            links: {}
+        }
+
         static styles = css`
         #menu-toggle {
             user-select: none;
@@ -83,7 +87,7 @@ import("https://esm.sh/lit").then(ex => {
 
             transition: color 200ms ease-in-out;
 
-            font-family: Roboto Mono;
+            font-family: Inter;
         }
 
         #menu-content a:hover {
