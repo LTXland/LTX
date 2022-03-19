@@ -41,6 +41,7 @@ import("https://esm.sh/lit").then(ex => {
         `;
 
         redirect(e) {
+            e.preventDefault();
             const input = this.shadowRoot.children[0].children[0], path = input.value;
             location.href = `/wiki/${path}`;
         }
