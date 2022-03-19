@@ -110,13 +110,13 @@ import("https://esm.sh/lit").then(ex => {
             }
 
             #menu-toggle {
-                height: 35%;
+                height: 40%;
             }
         }
 
         @media only screen and (orientation: portrait) and (max-width: 1000px) {
             :host {
-                --menu-link: 1.75rem;
+                --menu-link: 1.5rem;
                 --menu-width: 5rem;
                 --menu-height: 5rem;
 
@@ -130,7 +130,7 @@ import("https://esm.sh/lit").then(ex => {
             }
 
             #menu-toggle {
-                height: 35%;
+                height: 50%;
             }
         }
 
@@ -150,7 +150,7 @@ import("https://esm.sh/lit").then(ex => {
             }
 
             #menu-toggle {
-                height: 35%;
+                height: 40%;
             }
         }
         `;

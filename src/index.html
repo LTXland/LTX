@@ -90,92 +90,6 @@
             transform: translateY(-50%);
         }
 
-        #menu-toggle {
-            user-select: none;
-
-            position: absolute;
-            top: 50%;
-            right: 1.25rem;
-            transform: translateY(-50%);
-            z-index: 2;
-
-            cursor: pointer;
-        }
-
-        #menu-close {
-            visibility: hidden;
-
-            opacity: 0%;
-            transition: opacity 150ms ease-in-out;
-
-            width: 100%;
-            height: 100%;
-
-            position: fixed;
-            left: 0;
-            top: 0;
-            z-index: 0;
-
-            background-color: rgba(0, 0, 0, 0.35);
-        }
-
-        #menu {
-            width: 0rem;
-            height: 100%;
-
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 1;
-
-            background-color: #151515;
-            border-left: -3px solid #212121;
-
-            transition: width 250ms ease-in-out;
-        }
-
-        #menu-content {
-            visibility: hidden;
-            opacity: 0%;
-            transition: opacity 150ms ease-in-out;
-
-            width: calc(100% - (1.25em * 2));
-            height: calc(100% - (1/12 * 100%) - 1.25em);
-
-            position: absolute;
-            top: calc(1/12 * 100%);
-            left: 50%;
-            transform: translateX(-50%);
-
-            text-align: right;
-        }
-
-        #menu-content a {
-            user-select: none;
-            
-            text-decoration: none;
-            color: #f0f0f0;
-            font-size: var(--menu-link);
-
-            z-index: 2;
-
-            cursor: pointer;
-
-            transition: color 200ms ease-in-out;
-
-            font-family: Roboto Mono;
-        }
-
-        #menu-content a:hover {
-            color: #ff9a51;
-        }
-
-        .menu-content-bottom {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-        }
-
         .content-bg-starship {
             user-select: none;
 
@@ -340,7 +254,6 @@
 
         @media only screen and (orientation: landscape) and (max-width: 1000px) {
             :root {
-                --menu-link: 1.75rem;
                 --content-catchphrase: 2.5rem;
                 --content-description: 1rem;
                 --tagline: 0.75rem;
@@ -348,16 +261,11 @@
 
             #logo {
                 height: 65%;
-            }
-
-            #menu-toggle {
-                height: 25%;
             }
         }
 
         @media only screen and (orientation: portrait) and (max-width: 1000px) {
             :root {
-                --menu-link: 1.75rem;
                 --content-catchphrase: 2.5rem;
                 --content-description: 1rem;
                 --tagline: 0.75rem;
@@ -366,15 +274,10 @@
             #logo {
                 height: 65%;
             }
-
-            #menu-toggle {
-                height: 25%;
-            }
         }
 
         @media only screen and (orientation: landscape) and (min-width: 1000px) {
             :root {
-                --menu-link: 1.75rem;
                 --content-catchphrase: 4rem;
                 --content-description: 1.5rem;
                 --tagline: 1.25rem;
@@ -382,10 +285,6 @@
 
             #logo {
                 height: 50%;
-            }
-
-            #menu-toggle {
-                height: 15%;
             }
         }
 
@@ -421,7 +320,7 @@
         }
     </style>
 
-    <script src="/src/components/menu.mjs" type="module"></script>
+    <link rel="modulepreload" href="/src/components/menu.mjs">
 </head>
 <body>
     <main>
@@ -442,5 +341,7 @@
             <div id="tagline">built with ♡ for space. coming soon</div>
         </div>
     </main>
+
+    <script src="/src/components/menu.mjs" type="module"></script>
 </body>
 </html>
