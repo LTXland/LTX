@@ -420,57 +420,14 @@
             background: #ff9a51; 
         }
     </style>
+
+    <script src="/src/components/menu.mjs" type="module"></script>
 </head>
 <body>
     <main>
         <div class="header">
             <img id="logo" src="/bin/logo.svg" draggable="false" />
-            <div class="menu">
-                <img id="menu-toggle" src="/bin/menu.svg" draggable="false" onclick="toggleMenu()"/>
-                <div id="menu">
-                    <div id="menu-close" onclick="closeMenu()"></div>
-                    <div id="menu-content">
-                        <div><a href="/launches">Launches</a></div>
-                        <div><a href="/streams">Streams</a></div>
-                        <div><a href="/wiki">Wiki</a></div>
-                        <div><a href="/about">About</a></div>
-                        <div class="menu-content-bottom"><a href="https://github.com/jordanreger/ltx">Github</a></div>
-                    </div>
-                </div>
-                <script>
-                    const menu_close = document.getElementById("menu-close");
-                    const menu = document.getElementById("menu");
-                    const menu_content = document.getElementById("menu-content");
-                    let open = false;
-
-                    function toggleMenu() {
-                        open = !open;
-                        if(open) {
-                            if(window.innerWidth <= 600){
-                                menu.style.width = "13.5rem"
-                            } else {
-                                menu.style.width = "12.5rem"
-                            }
-                            menu_content.style.visibility = "visible";
-                            setTimeout(() => { menu_content.style.opacity = "100%" }, 150);
-                            menu_close.style.visibility = "visible";
-                            menu_close.style.opacity = "100%";
-                        } else {
-                            menu.style.width = "0rem";
-                            setTimeout(() => { menu_content.style.visibility = "hidden" }, 50);
-                            menu_content.style.opacity = "0%";
-                            setTimeout(() => { menu_close.style.visibility = "hidden" }, 150);
-                            menu_close.style.opacity = "0%";
-                        }
-                    }
-
-                    function closeMenu() {
-                        if(open) {
-                            toggleMenu();
-                        }
-                    }
-                </script>
-            </div>
+            <ltx-menu></ltx-menu>
         </div>
         <div class="content">
             <img class="content-bg-starship" src="/bin/starship-diagram-back.svg" draggable="false">
