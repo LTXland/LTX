@@ -96,6 +96,14 @@ import("https://esm.sh/lit").then(ex => {
             bottom: 0;
         }
 
+        #menu-content hr {
+            border: none;
+            height: 2px;
+            background-color: #424242;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
         @media only screen and (orientation: landscape) and (max-width: 1000px) {
             :host {
                 --menu-link: 1.5rem;
@@ -202,7 +210,7 @@ import("https://esm.sh/lit").then(ex => {
                             <div><a href="/streams">Streams</a></div>
                             <div><a href="/wiki">Wiki</a></div>
                             <div><a href="/about">About</a></div>
-                            <br/>
+                            <hr/>
                             <div><a href="https://github.com/jordanreger/LTX">Github</a></div>
                         </div>
                     </div>
