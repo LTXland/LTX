@@ -2,6 +2,6 @@
 
 .github  @jordanreger
 
-bin/     @jordanreger
+bin/     @LTXland/wiki
 src/     @LTXland/core
-wiki/    @LTXland/wiki
+wiki/    @LTXland/core @LTXland/wiki
