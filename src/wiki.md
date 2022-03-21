@@ -5,7 +5,7 @@ Welcome to ltxwiki! Take a look at a few of the latest entries:
 
 <script>
     let entries = document.getElementById("entries");
-    fetch("https://api.github.com/repos/jordanreger/ltx/contents/wiki").then(response => response.json()).then((res) => {
+    fetch("https://api.github.com/repos/LTXland/ltx/contents/wiki").then(response => response.json()).then((res) => {
         for(const md in res){
             const name = res[md].name.replace(".md", "");
             if(name !== "test"){
@@ -18,4 +18,4 @@ Welcome to ltxwiki! Take a look at a few of the latest entries:
 <br/>
 
 # Contribute
-Take a look at the <a href="https://github.com/jordanreger/ltx#contribute">contribution guide</a>!
+Take a look at the <a href="https://github.com/LTXland/ltx#contribute">contribution guide</a>!
