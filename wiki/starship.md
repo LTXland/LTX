@@ -10,6 +10,8 @@ width: 100%;
 </style>
 </header>
 
+<h5> Image Source: <a href="https://www.flickr.com/photos/spacex/51171019709">SpaceX</a> </h5>
+
 <br/>
 
 ### Overview
@@ -22,7 +24,7 @@ SpaceX's Starship consists of Starship (the spacecraft) and Super Heavy (the boo
 
 <div align="center">
 (<a href="https://www.spacex.com/vehicles/starship">spacex.com</a>)
-<div>
+</div>
 
 <br/>
 
@@ -36,9 +38,9 @@ Superheavy has 33 sea level Raptor engines onboard. You can learn more about the
 <br/>
 
 ### Launch and Development Sites 
-### Starbase, TX
+#### Starbase, TX
 Located in Boca Chica, TX, Starbase is the primary test facility and launch site of Starship. It currently boasts 2 suborbital test stands, and a full orbital pad with a tower and catch arms. 
-### Kennedy Space Center
+#### Kennedy Space Center
 SpaceX is currenly constructing a Starship orbital launch pad at Launch Complex 39A. Future plans include a new pad specifically for Starship operations north of the current pads, Launch Complex 49. 
 
 <br/>
