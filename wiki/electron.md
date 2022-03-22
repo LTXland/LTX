@@ -16,15 +16,15 @@ width: 100%;
 
 Rocket Lab's Electron rocket is their workhorse rocket, built to take smaller satellites to orbit in a cost-effective manner. It is partially reusable as of now, with plans to catch the booster via parachute and a helicopter. 
 
-<p align="center">
+<div align="center">
 | Height | Diameter | Payload to LEO |
 | :----: | :------: | :------------: |
 | 18m / 59ft | 1.2m / 3.9ft | 300kg / 661lb |
-</p>
+</div>
 
-<p align="center">
+<div align="center">
 (<a href="https://www.rocketlabusa.com/launch/electron">rocketlabusa.com</a>)
-</p>
+</div>
 
 <br/>
 
