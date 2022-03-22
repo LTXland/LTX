@@ -101,6 +101,10 @@ export const md = async (src: string) => {
         height: 3px;
         background: #212121;
       }
+      
+      img {
+        border-radius: 5px;
+      }
 
       @media only screen and (orientation: landscape) and (max-width: 1000px) {
           :root {
