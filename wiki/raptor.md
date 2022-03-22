@@ -9,6 +9,8 @@ width: 75%;
 }
 </style>
 
+<br/>
+
 Image Source: <a href="https://flickr.com/spacex">SpaceX</a>
 
 </header>
