@@ -8,10 +8,12 @@ header img {
 width: 100%;
 }
 </style>
-</header>
+
+<br/>
 
 <h5> Image Source: <a href="https://www.flickr.com/photos/nasakennedy/46349878804">Nasa Kennedy</a> </h5>
 
+</header>
 
 <br/>
 

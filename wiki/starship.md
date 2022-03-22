@@ -8,9 +8,12 @@ header img {
 width: 100%;
 }
 </style>
-</header>
+
+<br/>
 
 <h5> Image Source: <a href="https://www.flickr.com/photos/spacex/51171019709">SpaceX</a> </h5>
+
+</header>
 
 <br/>
 
