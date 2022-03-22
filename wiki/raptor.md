@@ -6,6 +6,7 @@
 <style>
 header img {
 width: 75%;
+border-radius:50%
 }
 </style>
 
