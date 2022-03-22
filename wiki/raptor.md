@@ -6,7 +6,7 @@
 <style>
 header img {
 width: 75%;
-border-radius:50%
+border-radius:5%
 }
 </style>
 
