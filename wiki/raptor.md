@@ -8,9 +8,9 @@
 			width: 75%;
 		}
 	</style>
-	
-</header>
 Image Source: SpaceX
+</header>
+
 <br/>
 
 ### Overview
