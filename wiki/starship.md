@@ -14,21 +14,30 @@ width: 100%;
 
 ### Overview
 
-SpaceX's Starship launch system consists of Starship (the spacecraft) and Super Heavy (the booster). Together this system is referred to as Starship. It is a fully reusable rocket, while still being able to transport 100+ tons to low Earth orbit (LEO).
+SpaceX's Starship consists of Starship (the spacecraft) and Super Heavy (the booster). Together this system is referred to as Starship. It is a fully reusable rocket, while still being able to transport 100+ tons to low Earth orbit (LEO).
 
+<p align="center">
 | Height | Diameter | Payload to LEO |
 | :----: | :------: | :------------: |
 | 120m / 394ft | 9m / 30ft | 100+t / 220+ klb |
+</p>
 
+<p align="center">
 (<a href="https://www.spacex.com/vehicles/starship">spacex.com</a>)
+</p>
 
 <br/>
 
 ### Engines
 #### Starship
-Starship has 3 sea level Raptor engines and 6 RVac (Raptor Vacuum) engines onboard.
+Starship has 3 sea level Raptor engines and 3 RVac (Raptor Vacuum) engines onboard. Future versions of Starship may have 6 RVacs. 
 
 #### Super Heavy
-Superheavy has 33 sea level Raptor engines onboard.
+Superheavy has 33 sea level Raptor engines onboard. You can learn more about the Raptor engine <a href="/wiki/raptor">here</a>.
 
+### Launch and Development Sites 
+### Starbase, TX
+Located in Boca Chica, TX, Starbase is the primary test facility and launch site of Starship. It currently boasts 2 suborbital test stands, and a full orbital pad with a tower and catch arms. 
+### Kennedy Space Center
+SpaceX is currenly constructing a Starship orbital launch pad at Launch Complex 39A. Future plans include a new pad specifically for Starship operations north of the current pads, Launch Complex 49. 
 <br/>
