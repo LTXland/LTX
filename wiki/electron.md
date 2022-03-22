@@ -1,13 +1,13 @@
 <header align="center">
-	<h2 align="left">Rocket Lab Electron</h2>
-	<hr/>
-	<br/>
-	<a href="https://www.flickr.com/photos/nasakennedy/46349878804"><img src="https://live.staticflickr.com/7838/46349878804_92336a90e7_b.jpg" alt="Rocket Lab's Electron rocket" title="Rocket Lab's Electron rocket"></a>
-	<style>
-		header img {
-			width: 100%;
-		}
-	</style>
+<h2 align="left">Rocket Lab Electron</h2>
+<hr/>
+<br/>
+<a href="https://www.flickr.com/photos/nasakennedy/46349878804"><img src="https://live.staticflickr.com/7838/46349878804_92336a90e7_b.jpg" alt="Rocket Lab's Electron rocket" title="Rocket Lab's Electron rocket"></a>
+<style>
+header img {
+width: 100%;
+}
+</style>
 </header>
 
 <br/>

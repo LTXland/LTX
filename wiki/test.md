@@ -43,10 +43,10 @@ Unordered
 
 + Create a list by starting a line with `+`, `-`, or `*`
 + Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
+- Marker character change forces new list start:
+* Ac tristique libero volutpat at
++ Facilisis in pretium nisl aliquet
+- Nulla volutpat aliquam velit
 + Very easy!
 
 Ordered
@@ -71,10 +71,10 @@ Inline `code`
 
 Indented code
 
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
+// Some comments
+line 1 of code
+line 2 of code
+line 3 of code
 
 
 Block code "fences"
@@ -87,7 +87,7 @@ Syntax highlighting
 
 ``` js
 var foo = function (bar) {
-  return bar++;
+return bar++;
 };
 
 console.log(foo(5));

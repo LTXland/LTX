@@ -1,13 +1,13 @@
 <header align="center">
-	<h2 align="left">Mars</h2>
-	<hr/>
-	<br/>
-	<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Mars" title="Mars"></a>
-	<style>
-		header img {
-			width: 50%;
-		}
-	</style>
+<h2 align="left">Mars</h2>
+<hr/>
+<br/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Mars" title="Mars"></a>
+<style>
+header img {
+width: 50%;
+}
+</style>
 </header>
 
 <br/>

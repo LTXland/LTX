@@ -32,6 +32,9 @@ async function handler(req: Request): Promise<Response> {
       const mdPath = path.replace(".md", "");
       tr = true, rb = md(mdPath), ct = "text/html; charset=UTF-8";
       break;
+    case '/contributing':
+      tr = true, rb = md("/src/contributing"), ct = "text/html; charset=UTF-8";
+      break;
 
     // components
     case '/src/components/menu.mjs':
