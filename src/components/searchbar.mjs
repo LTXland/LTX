@@ -49,7 +49,7 @@ import("https://esm.sh/lit").then(ex => {
         render() {
             return html`
             <form @submit=${(e) => this.redirect(e)} action=".">
-                <input type="search" name="text" placeholder="Search the universe..." list="popularpages" autocorrect="off" enterkeyhint="search">
+                <input type="text" name="text" placeholder="Search the universe..." list="popularpages" autocorrect="off" enterkeyhint="search">
                 <datalist id="popularpages">
                   <option value="starship">
                   <option value="mars">
