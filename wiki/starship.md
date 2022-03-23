@@ -21,10 +21,14 @@ width: 100%;
 
 SpaceX's Starship consists of Starship (the spacecraft) and Super Heavy (the booster). Together this system is referred to as Starship. It is a fully reusable rocket, while still being able to transport 100+ tons to low Earth orbit (LEO).
 
+<div align="center">
+  
 | Height | Diameter | Payload to LEO |
 | :----: | :------: | :------------: |
 | 120m / 394ft | 9m / 30ft | 100+t / 220+ klb |
-
+  
+</div>
+  
 <div align="center">
 (<a href="https://www.spacex.com/vehicles/starship">spacex.com</a>)
 </div>
