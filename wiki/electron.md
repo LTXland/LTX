@@ -25,6 +25,8 @@ Rocket Lab's Electron rocket is their workhorse rocket, built to take smaller sa
 | :----: | :------: | :------------: |
 | 18m / 59ft | 1.2m / 3.9ft | 300kg / 661lb |
 
+<br/>
+
 <div align="center">
 (<a href="https://www.rocketlabusa.com/launch/electron">rocketlabusa.com</a>)
 </div>
