@@ -106,6 +106,18 @@ export const md = async (src: string) => {
         border-radius: 5px;
       }
 
+      table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      table, th, td {
+        border: 2px solid #696969;
+        padding: 0.5rem;
+
+      }
+
       @media only screen and (orientation: landscape) and (max-width: 1000px) {
           :root {
               --content-catchphrase: 2.5rem;
@@ -153,11 +165,6 @@ export const md = async (src: string) => {
           p, ul, ol, table, body {
             color: #c4c4c4;
             font-family: Inter;
-          }
-
-          table {
-            border-color: #212121;
-            width: 100%;
           }
 
           blockquote {
@@ -230,11 +237,6 @@ export const md = async (src: string) => {
             font-family: Inter;
           }
 
-          table {
-            border-color: #212121;
-            width: 100%;
-          }
-
           blockquote {
             border-left: 2px solid #212121;
             margin: 2px 10px;
@@ -303,12 +305,6 @@ export const md = async (src: string) => {
           p, ul, ol, table, body {
             color: #c4c4c4;
             font-family: Inter;
-          }
-
-          table {
-            border-color: #212121;
-            font-size: 1.25rem;
-            width: 100%;
           }
 
           blockquote {
