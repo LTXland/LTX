@@ -126,7 +126,6 @@ export const md = async (src: string) => {
 
       table, th, td {
         width: 100%;
-        height: 100%;
         border: 2px solid #696969;
         padding: 0.5rem;
       }
