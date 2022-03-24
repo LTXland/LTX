@@ -23,6 +23,43 @@ deno run -A --watch main.ts
 
 The server is started! Open [localhost:8000](http://localhost:8000) and now you can start editing files; just refresh the page in your browser to see your edits!
 
+### LTX Git Format
+To maintain order and readability, it's important to follow the LTX Git format. Learn more below.
+
+#### Commits
+When it comes to commits, we follow the [Conventional Commits](https://conventionalcommits.org/en/v1.0.0) format. An example commit could look like this:
+
+```
+feat(core): all new rainbow UI!
+```
+
+or for wiki articles:
+
+```
+// new article
+feat(wiki): bee movie script
+
+// editing article
+fix(wiki): bee movie script
+
+replaced all of the Os with the correct Cs
+```
+
+It's simple! It conveys necessary information in a short and orderly manner.
+
+#### Versioning
+We follow [Semantic Versioning](https://semver.org) for our releases. If you are a core contributor or a wiki editor, you don't need to worry about this. However, if you are a core member, use this format when publishing releases. An example version:
+
+```
+v1.23.4
+```
+
+- MAJOR version: 1
+- MINOR version: 23
+- PATCH version: 4
+
+Please maintain this format for releases to maintain the LTX Git format.
+
 ### Wiki
 The wiki is an important tool; it holds a ton of information about everything space - that's why LTX is "your one stop shop for everything space"! 
 
