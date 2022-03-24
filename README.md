@@ -35,6 +35,43 @@ deno run -A --watch main.ts
 
 The server is started! Open [localhost:8000](http://localhost:8000) and now you can start editing files; just refresh the page in your browser to see your edits!
 
+### LTX Git Format
+To maintain order and readability, it's important to follow the LTX Git format. Learn more below.
+
+#### Commits
+When it comes to commits, we follow the [Conventional Commits](https://conventionalcommits.org/en/v1.0.0) format. An example commit could look like this:
+
+```
+feat(core): all new rainbow UI!
+```
+
+or for wiki articles:
+
+```
+// new article
+feat(wiki): bee movie script
+
+// editing article
+fix(wiki): bee movie script
+
+replaced all of the Os with the correct Cs
+```
+
+It's simple! It conveys necessary information in a short and orderly manner.
+
+#### Versioning
+We follow [Semantic Versioning](https://semver.org) for our releases. If you are a core contributor or a wiki editor, you don't need to worry about this. However, if you are a core member, use this format when publishing releases. An example version:
+
+```
+v1.23.4
+```
+
+- MAJOR version: 1
+- MINOR version: 23
+- PATCH version: 4
+
+Please maintain this format for releases to maintain the LTX Git format.
+
 ### Wiki
 The wiki is an important tool; it holds a ton of information about everything space - that's why LTX is "your one stop shop for everything space"! 
 
@@ -45,9 +82,9 @@ You can get started by navigating to `/wiki` in your folder *and* in your browse
 ### Core
 Everything that is the backbone of LTX is located in `/src`. 
 
-If you'd like to contribute to the core, it is necessary to understand [Deno](https://deno.land) (and [TypeScript](https://typescriptlang.org)), [Markdown](https://daringfireball.net/projects/markdown/), and basic Git and Github processes.
+If you'd like to contribute to the core, it is necessary to understand HTML and CSS, [Deno](https://deno.land) (and [TypeScript](https://typescriptlang.org)), [Markdown](https://daringfireball.net/projects/markdown/), and basic Git and Github processes.
 
-Once you're done editing your code, please [make a pull request](https://github.com/LTXland/LTX/compare).
+Once you're done editing your code, please [make a pull request](https://github.com/LTXland/LTX/compare). That's all there is to it! One of the core contributors will review your PR within a day or two, and will either merge it or leave a comment.
 
 Finally, **thank you for contributing!**
 
