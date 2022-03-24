@@ -234,8 +234,12 @@
         }
 
         a {
-            text-decoration: none;
             color: inherit;
+            transition: color 100ms ease-in-out;
+        }
+
+        a:hover {
+            color: #ff9a51;
         }
 
         br {
@@ -261,7 +265,7 @@
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #ff9a51; 
+            background: #ff9a51;
         }
     </style>
 
@@ -278,7 +282,7 @@
             <img class="content-bg-starship" src="/bin/starship-diagram-back.svg" draggable="false">
             <div class="search-bar">
                 <div class="title">LTX Wiki</div>
-                <div class="subtitle">Welcome to the LTX Wiki! Here you can learn about everything from Mars to SpaceX's special alloy. Search our extensive collection below!</div>
+                <div class="subtitle">Welcome to the LTX Wiki! Here you can learn about everything from Mars to SpaceX's special alloy. Search our extensive collection below! Want to add to the collection? <a href="/contributing">Read the contribution guide!</a></a></div>
                 <wiki-searchbar></wiki-searchbar>
             </div>
         </div>

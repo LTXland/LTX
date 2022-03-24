@@ -61,6 +61,15 @@ async function handler(req: Request): Promise<Response> {
       tr = true, rb = await file("./bin/cover.svg"), ct = "image/svg+xml";
       break;
 
+    // community
+    case '/discord':
+      tr = false, rb = "https://discord.gg/Zma3aV9Zdm";
+      break;
+
+    // dev
+    case '/github':
+      tr = false, rb = "https://github.com/LTXland/LTX";
+      break;
     case '/dev':
       const deployment_link = Deno.env.get("DENO_DEPLOYMENT_ID") ? `-${Deno.env.get("DENO_DEPLOYMENT_ID")}` : "",
       deployment_name = Deno.env.get("DENO_DEPLOYMENT_ID") ? `-${Deno.env.get("DENO_DEPLOYMENT_ID")}` : "dev",
@@ -70,7 +79,7 @@ async function handler(req: Request): Promise<Response> {
       break;
 
     default:
-      tr = true, rb = "404", ct = "text/html; charset=UTF-8";
+      tr = true, rb = md("/src/404"), ct = "text/html; charset=UTF-8";
   }
 
   let res;

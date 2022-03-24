@@ -35,6 +35,7 @@ export const md = async (src: string) => {
       <style>
       html {
         background-color: #101010;
+        scroll-behavior: smooth;
       }
 
       main {
@@ -87,6 +88,10 @@ export const md = async (src: string) => {
           overflow-y: scroll;
       }
 
+      .content > :last-child {
+        margin-bottom: 3rem;
+      }
+
       #logo {
           user-select: none;
 
@@ -100,6 +105,7 @@ export const md = async (src: string) => {
         border: none;
         height: 3px;
         background: #212121;
+        margin-bottom: 2rem;
       }
       
       img {
@@ -108,14 +114,32 @@ export const md = async (src: string) => {
 
       table {
         table-layout: fixed;
-        width: 100%;
+        width: max-content;
+        max-width: 100%;
         border-collapse: collapse;
+      }
+
+      th {
+        background-color: #151515;
       }
 
       table, th, td {
         border: 2px solid #696969;
         padding: 0.5rem;
+      }
 
+      pre, code {
+        color: #e0e0e0;
+        text-align: left;
+        font-family: Roboto Mono;
+        background-color: #151515;
+        border-radius: 5px;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+      }
+
+      pre {
+        padding: 1rem;
       }
 
       @media only screen and (orientation: landscape) and (max-width: 1000px) {
@@ -175,12 +199,7 @@ export const md = async (src: string) => {
           }
 
           code, pre {
-            color: #e0e0e0;
             font-size: 1.25rem;
-            font-family: Roboto Mono;
-            background-color: #151515;
-            padding: 0.25rem;
-            border-radius: 5px;
           }
 
           img {
@@ -245,12 +264,7 @@ export const md = async (src: string) => {
           }
 
           code, pre {
-            color: #e0e0e0;
             font-size: 1rem;
-            font-family: Roboto Mono;
-            background-color: #151515;
-            padding: 0.25rem;
-            border-radius: 5px;
           }
 
           img {
@@ -315,12 +329,7 @@ export const md = async (src: string) => {
           }
 
           code, pre {
-            color: #e0e0e0;
             font-size: 1.25rem;
-            font-family: Roboto Mono;
-            background-color: #151515;
-            padding: 0.25rem;
-            border-radius: 5px;
           }
 
           img {
