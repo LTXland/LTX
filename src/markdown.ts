@@ -116,7 +116,7 @@ export const md = async (src: string) => {
         table-layout: fixed;
         width: max-content;
         max-width: 100%;
-        min-width: none;
+        box-sizing: border-box;
         border-collapse: collapse;
       }
 
