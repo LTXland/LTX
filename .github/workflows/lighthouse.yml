@@ -1,12 +1,13 @@
 name: Lighthouse
-on: push
-
+on: [push]
 jobs:
-  lighthouse:
+  lighthouseci:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Lighthouse
-      uses: foo-software/lighthouse-check-action@master
-      with:
-        urls: 'https://ltx.deno.dev,https://ltx.deno.dev/launches,https://ltx.deno.dev/streams,https://ltx.deno.dev/about,https://ltx.deno.dev/wiki,https://ltx.deno.dev/wiki/template'
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - run: npm install && npm install -g @lhci/cli@0.8.x
+      - run: npm run build
+      - run: lhci autorun
