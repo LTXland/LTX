@@ -377,7 +377,7 @@ export const md = async (src: string) => {
       }
       </style>
 
-      <link rel="modulepreload" href="/src/components/menu.mjs">
+      <link rel="modulepreload" as="script" href="/src/components/menu.mjs">
     </head>
     <body>
     <main>
