@@ -25,6 +25,8 @@ import("https://esm.sh/lit").then(ex => {
 
             user-select: none;
 
+            box-sizing: border-box;
+
             transition: background-color 150ms ease-in-out, border 150ms ease-in-out;
         }
 
