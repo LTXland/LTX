@@ -60,6 +60,9 @@ async function handler(req: Request): Promise<Response> {
     case '/bin/cover.svg':
       tr = true, rb = await file("./bin/cover.svg"), ct = "image/svg+xml";
       break;
+    case '/robots.txt':
+      tr = true, rb = "User-agent: *\nDisallow:", ct = "text/plain";
+      break;
 
     // community
     case '/discord':

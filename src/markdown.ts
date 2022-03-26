@@ -5,8 +5,10 @@ const file = async (fp:string) => { const d = new TextDecoder("utf-8"); try { re
 export const md = async (src: string) => {
     const title = src.replace(/\/.*\//gmis, "")[0].toUpperCase() + src.replace(/\/.*\//gmis, "").slice(1);
     return `
+    <!DOCTYPE html>
+    <html>
     <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
       <!-- Primary Meta Tags -->
       <title>${title} | LTX — your one stop shop for everything space</title>
@@ -31,7 +33,7 @@ export const md = async (src: string) => {
 
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet" rel="preload" as="style">
       <style>
       html {
         background-color: #101010;
@@ -389,5 +391,6 @@ export const md = async (src: string) => {
     </main>
     <script src="/src/components/menu.mjs" type="module"></script>
     </body>
+    </html>
     `;
 }

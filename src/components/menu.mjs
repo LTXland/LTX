@@ -204,7 +204,7 @@ import("https://esm.sh/lit").then(ex => {
         render() {
             return html`
             <div class="menu">
-                <img id="menu-toggle" src="/bin/more_vert_white_48dp.svg" draggable="false" @click=${this.toggleMenu}/>
+                <img id="menu-toggle" alt="menu toggle" src="/bin/more_vert_white_48dp.svg" draggable="false" @click=${this.toggleMenu}/>
                 <div id="menu">
                     <div id="menu-close" @click=${this.closeMenu}></div>
                     <div id="menu-content">

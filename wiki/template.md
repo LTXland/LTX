@@ -2,7 +2,7 @@
 
 ---
 
-![image](https://via.placeholder.com/1920x1080/212121/e0e0e0.webp)
+![image](https://via.placeholder.com/1920x1080/212121/e0e0e0.webp "placeholder")
 
 Source: [Placeholder](https://placeholder.com)
 
