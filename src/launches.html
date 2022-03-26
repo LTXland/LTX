@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
     <!-- Primary Meta Tags -->
-    <title>Wiki | LTX — your one stop shop for everything space</title>
+    <title>Launches | LTX — your one stop shop for everything space</title>
     <meta name="title" content="LTX — your one stop shop for everything space">
     <meta name="description" content="Learn about everything from Mars to rocket engines, watch a launch from a bunch of different views, and more.">
 
@@ -89,101 +89,6 @@
             top: 50%;
             left: 1.25rem;
             transform: translateY(-50%);
-        }
-
-        .content-bg-starship {
-            user-select: none;
-
-            opacity: 25%;
-
-            position: fixed;
-            width: 125%;
-            top: 50%;
-            left: 95%;
-
-            transform: translate(-50%, -50%) rotate(-15deg);
-
-            animation-duration: 15s;
-            animation-name: starship;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes starship {
-            0% {
-                transform: translate(-50%, -50%) rotate(-15deg);
-            }
-
-            25% {
-                transform: translate(-50%, -50%) rotate(-12deg);
-            }
-
-            75% {
-                transform: translate(-50%, -50%) rotate(-17deg);
-            }
-        }
-
-
-        .search-bar {
-            position: absolute;
-            left: 50%;
-            top: calc(50% - (1/12 * 100%));
-            transform: translate(-50%, -50%);
-            height: min-content;
-        }
-
-        .search-bar .title {
-            font-family: Archivo Black;
-            color: #f0f0f0;
-            font-size: var(--content-catchphrase);
-        }
-
-        .search-bar .subtitle {
-            font-family: Inter;
-            color: #c4c4c4;
-            font-size: var(--content-description);
-
-            margin-bottom: 1.25rem;
-        }
-
-        .content-buttons-launches {
-            background-color: #151515;
-            width: max-content;
-            padding-left: var(--content-description);
-            padding-right: var(--content-description);
-            padding-top: calc(var(--content-description) / 2);
-            padding-bottom: calc(var(--content-description) / 2);
-            
-            border: 3px solid #212121;
-            border-radius: 5px;
-
-            color: #f0f0f0;
-            font-family: Roboto Mono;
-            font-size: var(--content-description);
-
-            user-select: none;
-
-            cursor: pointer;
-
-            transition: background-color 150ms ease-in-out, border 150ms ease-in-out;
-        }
-
-        .content-buttons-launches:hover {
-            background-color: #212121;
-            border: 3px solid #ff9a51;
-        }
-
-        #tagline {
-            position: absolute;
-            left: 50%;
-            bottom: 1.25rem;
-            transform: translateX(-50%);
-
-            font-family: Inter;
-            color: #c4c4c4;
-            font-size: var(--tagline);
-            width: max-content;
-
-            user-select: none;
         }
 
         @media only screen and (orientation: landscape) and (max-width: 1000px) {
@@ -280,16 +185,9 @@
             <ltx-menu></ltx-menu>
         </div>
         <div class="content">
-            <img class="content-bg-starship" alt="starship" src="/bin/starship-diagram-back.svg" draggable="false">
-            <div class="search-bar">
-                <div class="title">LTX Wiki</div>
-                <div class="subtitle">Welcome to the LTX Wiki! Here you can learn about everything from Mars to SpaceX's special alloy. Search our extensive collection below! Want to add to the collection? <a href="/contributing">Read the contribution guide!</a></a></div>
-                <wiki-searchbar></wiki-searchbar>
-            </div>
         </div>
     </main>
 
     <script src="/src/components/menu.mjs" type="module"></script>
-    <script src="/src/components/searchbar.mjs" type="module"></script>
 </body>
 </html>

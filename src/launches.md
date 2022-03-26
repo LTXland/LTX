@@ -1,2 +1,0 @@
-# Launch Schedule
-Coming soon!
