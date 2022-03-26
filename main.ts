@@ -2,7 +2,7 @@
 import { serve } from "https://deno.land/std@0.128.0/http/server.ts"
 
 import { md } from "./src/markdown.ts";
-import { toml, dates /*tomlDate*/ } from "./src/toml.ts";
+import { toml } from "./src/toml.ts";
 
 async function handler(req: Request): Promise<Response> {
   const url = new URL(req.url);
@@ -18,10 +18,10 @@ async function handler(req: Request): Promise<Response> {
       tr = true, rb = await file("./src/index.html"), ct = "text/html; charset=UTF-8";
       break;
     case '/launches':
-      tr = true, rb = `${await dates()}`, ct = "text/html; charset=UTF-8";
+      tr = true, rb = toml(), ct = "text/html; charset=UTF-8";
       break;
     case route('/launches/.'):
-      tr = true, rb = toml(`.${path}.toml`), ct = "application/json";
+      tr = true, rb = toml(), ct = "text/html; charset=UTF-8";
       break;
     case '/streams':
       tr = true, rb = await file("./src/streams.html"), ct = "text/html; charset=UTF-8";
