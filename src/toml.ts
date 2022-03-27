@@ -23,12 +23,16 @@ export const dates = async () => {
 export const toml = async () => {
     let launches = ``;
     const arr = await dates();
-    let title, date, vehicle;
+    let title, date, cover;
     for(const len in arr){
-        const launch: {title? : string, date?: string, overview?: { vehicle?: string }} = arr[len];
-        title = launch.title, date = launch.date, vehicle = launch.overview?.vehicle;
+        const launch: {title? : string, date?: string, cover?: string, overview?: { vehicle?: string }} = arr[len];
+        title = launch.title, date = launch.date, cover = launch.cover;
         launches = launches.concat('\n',`
-        <li>${title}, ${date}, ${vehicle}</li>
+        <div class="launch-card">
+          <div class="launch-card-cover"><img src="${cover}" alt="${title}"></div>
+          <div class="launch-card-title">${title}</div>
+          <div class="launch-card-date">${date}</div>
+        </div>
         `);
     }
 
@@ -172,6 +176,22 @@ export const toml = async () => {
 
       pre {
         padding: 1rem;
+      }
+
+      .launch-list {
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-auto-rows: min-content; 
+        row-gap: 2em;
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: max-content;
+      }
+
+      .launch-card {
+        text-align: center;
       }
 
       @media only screen and (orientation: landscape) and (max-width: 1000px) {
@@ -320,6 +340,7 @@ export const toml = async () => {
             padding-left: 2rem;
             padding-right: 2rem;
           }
+
           body {
             background: #101010;
             text-align: justify;
@@ -414,9 +435,9 @@ export const toml = async () => {
         <ltx-menu></ltx-menu>
       </div>
       <div class="content">
-        <ul>
+        <div class="launch-list">
             ${launches}
-        </ul>
+        </div>
       </div>
     </main>
     <script src="/src/components/menu.mjs" type="module"></script>
