@@ -1,7 +1,3 @@
-import { Marked } from "https://deno.land/x/markdown@v2.0.0/mod.ts";
-
-const file = async (fp:string) => { const d = new TextDecoder("utf-8"); try { return d.decode(await Deno.readFile(fp))} catch { return d.decode(await Deno.readFile("./src/404.md")) }}
-
 export const md = async (src: string) => {
     const html = await fetch(`https://api-ltx.deno.dev/wiki/${src}`).then(res => res.text())
 
