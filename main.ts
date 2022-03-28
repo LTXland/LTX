@@ -2,7 +2,7 @@
 import { serve } from "https://deno.land/std@0.128.0/http/server.ts"
 
 import { md } from "./src/markdown.ts";
-import { toml } from "./src/toml.ts";
+//import { toml } from "./src/toml.ts";
 
 async function handler(req: Request): Promise<Response> {
   const url = new URL(req.url);

@@ -7,8 +7,8 @@
 ### Tools
 
 - **streams** — watch a launch from a bunch of different views
-- **launch schedule** — figure out when the next launch is
-- **wiki** — learn about everything from Mars to SpaceX's special alloy
+- [**launch schedule**](https://github.com/LTXland/launches) — figure out when the next launch is
+- [**wiki**](https://github.com/LTXland/wiki) — learn about everything from Mars to SpaceX's special alloy
 - and more! if you have a tool you want to use, [make an issue](https://github.com/LTXland/ltx/issues/new)!
 
 
