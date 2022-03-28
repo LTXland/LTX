@@ -3,6 +3,8 @@ import { Marked } from "https://deno.land/x/markdown@v2.0.0/mod.ts";
 const file = async (fp:string) => { const d = new TextDecoder("utf-8"); try { return d.decode(await Deno.readFile(fp))} catch { return d.decode(await Deno.readFile("./src/404.md")) }}
 
 export const md = async (src: string) => {
+    const html = await fetch(`/proxy/https://api-ltx.deno.dev/wiki/${src}`).then(res => res.text());
+
     const title = src.replace(/\/.*\//gmis, "")[0].toUpperCase() + src.replace(/\/.*\//gmis, "").slice(1);
     return `
     <!DOCTYPE html>
@@ -386,7 +388,7 @@ export const md = async (src: string) => {
         <ltx-menu></ltx-menu>
       </div>
       <div class="content">
-        ${Marked.parse(await file(`./${src}.md`)).content}
+        ${html}
       </div>
     </main>
     <script src="/src/components/menu.mjs" type="module"></script>

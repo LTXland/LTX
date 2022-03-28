@@ -30,7 +30,7 @@ async function handler(req: Request): Promise<Response> {
       tr = true, rb = await file("./src/wiki.html"), ct = "text/html; charset=UTF-8";
       break;
     case route('/wiki/.'):
-      const mdPath = path.replace(".md", "");
+      const mdPath = path.replace("/wiki/", "").replace(".md", "");
       tr = true, rb = md(mdPath), ct = "text/html; charset=UTF-8";
       break;
     case '/contributing':
@@ -51,7 +51,6 @@ async function handler(req: Request): Promise<Response> {
     case route('/proxy/.'):
       const url = path.replace("/proxy/", "");
       const res = await fetch(url).then(res => res.text());
-      console.log(res);
       tr = true, rb = res, ct = "text/plain";
       break;
     
