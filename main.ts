@@ -18,10 +18,7 @@ async function handler(req: Request): Promise<Response> {
       tr = true, rb = await file("./src/index.html"), ct = "text/html; charset=UTF-8";
       break;
     case '/launches':
-      tr = true, rb = toml(), ct = "text/html; charset=UTF-8";
-      break;
-    case route('/launches/.'):
-      tr = true, rb = toml(), ct = "text/html; charset=UTF-8";
+      tr = true, rb = await file("./src/launches.html"), ct = "text/html; charset=UTF-8";
       break;
     case '/streams':
       tr = true, rb = await file("./src/streams.html"), ct = "text/html; charset=UTF-8";
@@ -47,7 +44,17 @@ async function handler(req: Request): Promise<Response> {
     case '/src/components/searchbar.mjs':
       tr = true, rb = await file("./src/components/searchbar.mjs"), ct = "text/javascript";
       break;
-
+    case '/src/components/latest-launch-card.mjs':
+      tr = true, rb = await file("./src/components/latest-launch-card.mjs"), ct = "text/javascript";
+      break;
+    
+    case route('/proxy/.'):
+      const url = path.replace("/proxy/", "");
+      const res = await fetch(url).then(res => res.text());
+      console.log(res);
+      tr = true, rb = res, ct = "text/plain";
+      break;
+    
     // bin
     case '/bin/logo.svg':
       tr = true, rb = await file("./bin/logo.svg"), ct = "image/svg+xml";
