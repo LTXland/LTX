@@ -24,7 +24,7 @@ async function handler(req: Request): Promise<Response> {
       tr = true, rb = await file("./src/streams.html"), ct = "text/html; charset=UTF-8";
       break;
     case '/about':
-      tr = true, rb = md("/src/about"), ct = "text/html; charset=UTF-8";
+      tr = true, rb = md("/wiki/about"), ct = "text/html; charset=UTF-8";
       break;
     case '/wiki':
       tr = true, rb = await file("./src/wiki.html"), ct = "text/html; charset=UTF-8";
@@ -34,7 +34,7 @@ async function handler(req: Request): Promise<Response> {
       tr = true, rb = md(mdPath), ct = "text/html; charset=UTF-8";
       break;
     case '/contributing':
-      tr = true, rb = md("/src/contributing"), ct = "text/html; charset=UTF-8";
+      tr = true, rb = md("/wiki/contributing"), ct = "text/html; charset=UTF-8";
       break;
 
     // components
