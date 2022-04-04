@@ -1,108 +1,32 @@
-// deno-lint-ignore-file no-case-declarations
-import { serve } from "https://deno.land/std@0.128.0/http/server.ts"
+const App = {
+  native: false,
+  routes: {
+    "/": "./src/index.html",
+    "/launches": "./src/launches.html",
+    "/streams": "./src/streams.html",
+    "/wiki": "./src/wiki.html",
+    "/wiki/.": "./src/article.html",
+    "/about": "./src/about.md",
 
-import { md } from "./src/markdown.ts";
-//import { toml } from "./src/toml.ts";
+    "/src/components/article.mjs": "./src/components/article.mjs",
+    "/src/components/menu.mjs": "./src/components/menu.mjs",
+    "/src/components/searchbar.mjs": "./src/components/searchbar.mjs",
+    "src/components/latest-launch-card.mjs": "./src/components/latest-launch-card.mjs",
 
-async function handler(req: Request): Promise<Response> {
-  const url = new URL(req.url);
-  const path = url.pathname, _params = new URLSearchParams(url.search);
-  const route = (route:string) => { const regexRoute = new RegExp(route, "gmi"); if(regexRoute.test(path)){ return path } else { return "/404" }}
-  const file = async (fp:string) => { const d = new TextDecoder("utf-8"); return d.decode(await Deno.readFile(fp))}
+    "/bin/logo.svg": "./bin/logo.svg",
+    "/bin/menu.svg": "./bin/menu.svg",
+    "/bin/more_vert_white_48dp.svg": "./bin/more_vert_white_48dp.svg",
+    "/bin/starship-diagram-back.svg": "./bin/starship-diagram-back.svg",
+    "/bin/cover.svg": "./bin/cover.svg",
 
-  let tr, rb, ct = "";
+    "/robots.txt": "./bin/robots.txt",
 
-  switch(path){
-    // paths
-    case '/':
-      tr = true, rb = await file("./src/index.html"), ct = "text/html; charset=UTF-8";
-      break;
-    case '/launches':
-      tr = true, rb = await file("./src/launches.html"), ct = "text/html; charset=UTF-8";
-      break;
-    case '/streams':
-      tr = true, rb = await file("./src/streams.html"), ct = "text/html; charset=UTF-8";
-      break;
-    case '/about':
-      tr = true, rb = md("/wiki/about"), ct = "text/html; charset=UTF-8";
-      break;
-    case '/wiki':
-      tr = true, rb = await file("./src/wiki.html"), ct = "text/html; charset=UTF-8";
-      break;
-    case route('/wiki/.'):
-      const mdPath = path.replace("/wiki/", "").replace(".md", "");
-      tr = true, rb = md(mdPath), ct = "text/html; charset=UTF-8";
-      break;
-    case '/contributing':
-      tr = true, rb = md("/wiki/contributing"), ct = "text/html; charset=UTF-8";
-      break;
-
-    // components
-    case '/src/components/menu.mjs':
-      tr = true, rb = await file("./src/components/menu.mjs"), ct = "text/javascript";
-      break;
-    case '/src/components/searchbar.mjs':
-      tr = true, rb = await file("./src/components/searchbar.mjs"), ct = "text/javascript";
-      break;
-    case '/src/components/latest-launch-card.mjs':
-      tr = true, rb = await file("./src/components/latest-launch-card.mjs"), ct = "text/javascript";
-      break;
-    
-    case route('/proxy/.'):
-      const url = path.replace("/proxy/", "");
-      const res = await fetch(url).then(res => res.text());
-      tr = true, rb = res, ct = "text/plain";
-      break;
-    
-    // bin
-    case '/bin/logo.svg':
-      tr = true, rb = await file("./bin/logo.svg"), ct = "image/svg+xml";
-      break;
-    case '/bin/menu.svg':
-      tr = true, rb = await file("./bin/menu.svg"), ct = "image/svg+xml";
-      break;
-    case '/bin/more_vert_white_48dp.svg':
-      tr = true, rb = await file("./bin/more_vert_white_48dp.svg"), ct = "image/svg+xml";
-      break;
-    case '/bin/starship-diagram-back.svg':
-      tr = true, rb = await file("./bin/starship-diagram-back.svg"), ct = "image/svg+xml";
-      break;
-    case '/bin/cover.svg':
-      tr = true, rb = await file("./bin/cover.svg"), ct = "image/svg+xml";
-      break;
-    case '/robots.txt':
-      tr = true, rb = "User-agent: *\nDisallow:", ct = "text/plain";
-      break;
-
-    // community
-    case '/discord':
-      tr = false, rb = "https://discord.gg/Zma3aV9Zdm";
-      break;
-
-    // dev
-    case '/github':
-      tr = false, rb = "https://github.com/LTXland/LTX";
-      break;
-    case '/dev':
-      const deployment_link = Deno.env.get("DENO_DEPLOYMENT_ID") ? `-${Deno.env.get("DENO_DEPLOYMENT_ID")}` : "",
-      deployment_name = Deno.env.get("DENO_DEPLOYMENT_ID") ? `-${Deno.env.get("DENO_DEPLOYMENT_ID")}` : "dev",
-      deployment_region = Deno.env.get("DENO_DEPLOYMENT_ID") ? Deno.env.get("DENO_REGION") : "dev",
-      github_sha = await fetch("https://api.github.com/repos/LTXland/ltx/commits").then(res => res.json()).then((res) => { return res[0].sha });
-      tr = true, rb = `DEPLOY: <a href="https://ltx${deployment_link}.deno.dev">${deployment_name}</a><br/>REGION: ${deployment_region}<br/>LATEST_COMMIT: <a href="https://github.com/LTXland/ltx/commit/${github_sha}">${github_sha}</a>`, ct = "text/html; charset=UTF-8";
-      break;
-
-    default:
-      tr = true, rb = md("/src/404"), ct = "text/html; charset=UTF-8";
+    "/discord": "https://discord.gg/Zma3aV9Zdm",
+    "/github": "https://github.com/LTXland"
   }
-
-  let res;
-
-  if(tr){
-    res = new Response(await rb, { headers: { "content-type": ct } });
-  } else {
-    res = Response.redirect(await rb, 302);
-  }
-  return res!;
 }
 
-await serve(handler);
+import Crate from "https://deno.land/x/crate@v1.2.0/mod.ts";
+
+const crate = new Crate();
+crate.serve(App);
