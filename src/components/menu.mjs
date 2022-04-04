@@ -213,10 +213,10 @@ import("https://esm.sh/lit").then(ex => {
                             <div><a href="/launches">Launches</a></div>
                             <div><a href="/streams">Streams</a></div>
                             <div><a href="/wiki">Wiki</a></div>
-                            <div><a href="/about">About</a></div>
+                            <div><a href="/wiki/about">About</a></div>
                             <hr/>
                             <div><a href="/github">Github</a></div>
-                            <!-- <div><a href="/discord">Discord</a></div> -->
+                            <div><a href="/discord">Discord</a></div>
                         </div>
                     </div>
                 </div>

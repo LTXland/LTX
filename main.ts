@@ -6,7 +6,6 @@ const App = {
     "/streams": "./src/streams.html",
     "/wiki": "./src/wiki.html",
     "/wiki/.": "./src/article.html",
-    "/about": "./src/about.md",
 
     "/src/components/article.mjs": "./src/components/article.mjs",
     "/src/components/menu.mjs": "./src/components/menu.mjs",

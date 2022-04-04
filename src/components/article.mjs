@@ -280,7 +280,7 @@ import("https://esm.sh/lit").then(ex => {
         
         async getArticle(){
             console.log(location.pathname);
-            const article = await fetch(`https://cors-anywhere.herokuapp.com/https://api-ltx.deno.dev${location.pathname}`).then(res => res.text())
+            const article = await fetch(`https://api-ltx.deno.dev${location.pathname}`).then(res => res.text())
             this.shadowRoot.children[0].innerHTML = article;
         }
 
