@@ -6,7 +6,7 @@ Deno.test({
         const result = await fetch(`https://ltx.deno.dev`);
         const contentType = result.headers.get("Content-Type");
         assert(contentType);
-        assert(contentType.includes("text/html; charset=UTF-8"));
+        assert(contentType.includes("text/html"));
         await result.body?.cancel();
     },
 });
