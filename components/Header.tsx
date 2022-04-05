@@ -25,7 +25,9 @@ export default function Header(props: { active: string }) {
 
   return (
     <header>
-      <img id="logo" src="/logo.svg" alt="LTX logo" draggable={false} />
+      <a href="/">
+        <img id="logo" src="/logo.svg" alt="LTX logo" draggable={false} />
+      </a>
       <div id="links">
         {items.map((item) => (
           <div>

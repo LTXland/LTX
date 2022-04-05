@@ -36,6 +36,26 @@ header #logo {
     user-select: none;
 }
 
+@media only screen and (max-width: 600px) {
+    header #links {
+        font-size: 0.75em;
+    }
+
+    header #github a {
+        font-size: 0.75em;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    header #links {
+        font-size: 1.25em;
+    }
+
+    header #github a {
+        font-size: 1.25em;
+    }
+}
+
 header #links {
     display: flex;
     flex-direction: row;
@@ -88,9 +108,4 @@ header #github {
 header #github a {
     text-decoration: none;
     color: inherit;
-}
-
-header #links div a:hover {
-    text-decoration: none;
-    color: #ff9a51;
 }
