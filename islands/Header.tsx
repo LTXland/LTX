@@ -1,6 +1,6 @@
 /** @jsx h */
 
-import { h, useState } from "../deps.ts";
+import { h, useState } from "../client_deps.ts";
 
 export default function Header(props: { active: string }) {
   const [open, setOpen] = useState(false);

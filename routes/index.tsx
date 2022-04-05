@@ -1,5 +1,5 @@
 /** @jsx h */
-import { h, Head } from "../deps.ts";
+import { h, Head } from "../client_deps.ts";
 
 /* Routes */
 import Header from "../islands/Header.tsx";
