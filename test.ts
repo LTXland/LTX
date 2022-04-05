@@ -11,7 +11,7 @@ Deno.test({
     },
 });
 
-Deno.test({
+/*Deno.test({
     name: "/launches responds with html",
     async fn() {
         const result = await fetch(`https://ltx.deno.dev/launches`);
@@ -75,4 +75,4 @@ Deno.test({
         assert(contentType.includes("text/html; charset=UTF-8"));
         await result.body?.cancel();
     },
-});
+});*/
