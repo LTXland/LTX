@@ -34,25 +34,38 @@ header #logo {
     left: 1em;
     transform: translateY(-50%);
     user-select: none;
+    z-index: 10;
 }
 
 @media only screen and (max-width: 600px) {
     header #links {
-        font-size: 0.75em;
+        visibility: hidden;
     }
 
-    header #github a {
-        font-size: 0.75em;
+    header #github {
+        visibility: hidden;
+    }
+
+    header .menu-toggle {
+        visibility: visible;
     }
 }
 
 @media only screen and (min-width: 600px) {
     header #links {
-        font-size: 1.25em;
+        visibility: visible;
     }
 
-    header #github a {
-        font-size: 1.25em;
+    header #github {
+        visibility: visible;
+    }
+
+    header .menu-toggle {
+        visibility: hidden;
+    }
+
+    header #menu-content {
+        visibility: hidden;
     }
 }
 
@@ -74,6 +87,7 @@ header #links div {
     color: #e0e0e0;
     font-family: Inter;
     font-weight: normal;
+    font-size: 1.25em;
 }
 
 header #links div .active {
@@ -94,18 +108,67 @@ header #links div:not(:last-child) {
     margin-right: 0.5em;
 }
 
-header #github {
-    color: #e0e0e0;
-    font-family: Inter;
-    font-weight: normal;
-
+header .menu-toggle {
     position: absolute;
     right: 1em;
     top: 50%;
     transform: translateY(-50%);
+
+    cursor: pointer;
+    z-index: 10;
 }
 
-header #github a {
+header .menu-toggle svg {
+    fill: #e0e0e0;
+}
+
+header #menu-content {
+    visibility: visible;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #151515;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header #menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: absolute;
+    left: 1em;
+    top: calc(100% / 12);
+    height: calc(100% - (100% / 12));
+}
+
+header #menu-links div {
+    flex: none;
+    flex-grow: 0;
+
+    color: #e0e0e0;
+    font-family: Inter;
+    font-weight: normal;
+    font-size: 3em;
+}
+
+header #menu-links div .active {
+    color: #ff9a51;
+}
+
+header #menu-links div a {
     text-decoration: none;
     color: inherit;
+}
+
+header #menu-links div a:hover {
+    text-decoration: none;
+    color: #ff9a51;
+}
+
+header #menu-links div:not(:last-child) {
+    margin-bottom: 0.5em;
 }

@@ -2,7 +2,7 @@
 import { h, Head } from "../deps.ts";
 
 /* Routes */
-import Header from "../components/Header.tsx";
+import Header from "../islands/Header.tsx";
 
 export default function Home() {
   return (
