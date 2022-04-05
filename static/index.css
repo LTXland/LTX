@@ -54,11 +54,10 @@ header #links div {
     color: #e0e0e0;
     font-family: Inter;
     font-weight: normal;
-    font-size: 1.1em;
 }
 
 header #links div .active {
-    text-decoration: underline;
+    color: #ff9a51;
 }
 
 header #links div a {
@@ -79,7 +78,6 @@ header #github {
     color: #e0e0e0;
     font-family: Inter;
     font-weight: normal;
-    font-size: 1.1em;
 
     position: absolute;
     right: 1em;
