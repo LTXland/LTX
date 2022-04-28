@@ -117,7 +117,7 @@ main {
 }
 
 .header .links > a {
-    color: #f0f0f0;
+    color: #696969;
     font-family: Space Mono;
 
     padding-left: 2vw;
@@ -131,14 +131,21 @@ main {
     cursor: pointer;
 }
 
-.header .links > a:hover {
+.header .links > .active {
     color: #101010;
     background-color: #ff9a51;
     border: 1px solid transparent;
+
+    pointer-events: none;
+}
+
+.header .links > a:hover {
+    color: #f0f0f0;
 }
 
 .header .links > a .arrow {
-    line-height: 2vh;
+    position: inherit;
+    top: 60%;
 }
 
 .x {
