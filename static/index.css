@@ -200,6 +200,24 @@ main {
     color: #ff9a51;
 }
 
+.x .box .content .body .launch-cover {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.x .box .content .body .launch-title {
+    font-family: Space Grotesk;
+    font-weight: 700;
+    font-size: 5vw;
+    color: #f0f0f0;
+}
+
+.x .box .content .body .launch-net {
+    font-family: Space Mono;
+    color: #c4c4c4;
+}
+
 .x .box .content .title {
     font-family: Space Grotesk;
     font-weight: 800;
@@ -235,3 +253,18 @@ main {
 .x .box .content .socials a:not(:last-child) {
     margin-right: 1vw;
 }
+
+.x .box .content .stream-embed {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.x .box .content .stream-embed iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
