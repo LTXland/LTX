@@ -17,7 +17,7 @@ export default function Home() {
           <a href="/">HOME</a>
           <a href="/launches">LAUNCHES</a>
           <a href="/streams">STREAMS</a>
-          <a href="https://github.com/LTXland">GITHUB <span class="arrow">🡕</span></a>
+          <a href="https://github.com/LTXland">GITHUB <span class="arrow">🡥</span></a>
         </div>
       </div>
       <div class="x">
