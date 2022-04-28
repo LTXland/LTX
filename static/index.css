@@ -53,7 +53,7 @@ main {
 
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
     .x .box {
-        width: calc(75% - 10vh);
+        width: calc(75% - 5vh);
     }
 
     .header .logo {
@@ -72,7 +72,7 @@ main {
 
 @media only screen and (min-width: 1200px) {
     .x .box {
-        width: calc(45% - 10vh);
+        width: calc(65% - 10vh);
     }
 
     .header .logo {
@@ -141,6 +141,7 @@ main {
 
 .header .links > a:hover {
     color: #f0f0f0;
+    background-color: #212121;
 }
 
 .header .links > a .arrow {
@@ -164,6 +165,8 @@ main {
     transform: translateX(-50%);
     height: max-content;
 
+    display: inline-block;
+
     margin-top: 3vh;
     padding: 2vh;
     border: 1px solid #424242;
@@ -180,21 +183,38 @@ main {
     font-size: 1.5vh;
 }
 
-.x .box .content {
+.x .box .content .title {
+    font-family: Space Grotesk;
+    font-weight: 800;
+    color: #f0f0f0;
+    font-size: 10vh;
+
+    text-align: center;
+}
+
+.x .box .content .description {
     font-family: Inter;
-    color: #c4c4c4;
     font-size: 2vh;
-    margin-top: 1vh;
-    max-width: 100%;
-    overflow-wrap: break-word;
+    color: #c4c4c4;
+
+    text-align: center;
 }
 
-.x .box .content a {
-    font-size: 1.85vh;
+.x .box .content .socials {
+    margin-top: 2vh;
+    text-align: center;
+}
+
+.x .box .content .socials a {
     font-family: Space Mono;
-    color: #ffcf96;
+    font-size: 1.75vh;
+    color: #ff9a51;
 }
 
-.x .box .content a:hover {
-    text-decoration: underline;
+.x .box .content .socials a:hover {
+    color: #f0f0f0;
+}
+
+.x .box .content .socials a:not(:last-child) {
+    margin-right: 1vw;
 }

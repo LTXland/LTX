@@ -15,10 +15,14 @@ export default function Home() {
         <Header active="/"></Header>
       </div>
       <div class="x">
-        <div class="box">
+        <div class="box" id="cover">
           <div class="content">
-            <div>
-              LTXland
+            <div class="title">LTXland</div>
+            <div class="description">Your one stop shop for everything space.</div>
+            <div class="socials">
+              <a href="https://discord.gg/Zma3aV9Zdm">Discord</a>
+              <a href="https://github.com/LTXland">GitHub</a>
+              <a href="https://twitter.com/LTXland">Twitter</a>
             </div>
           </div>
         </div>
