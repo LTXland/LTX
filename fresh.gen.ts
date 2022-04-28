@@ -3,11 +3,13 @@
 // To update this file, run `fresh manifest`.
 
 import * as $0 from "./routes/index.tsx";
+import * as $1 from "./routes/launches.tsx";
 import * as $$0 from "./islands/Header.tsx";
 
 const manifest = {
   routes: {
     "./routes/index.tsx": $0,
+    "./routes/launches.tsx": $1,
   },
   islands: {
     "./islands/Header.tsx": $$0,
