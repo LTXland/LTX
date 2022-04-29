@@ -17,8 +17,9 @@ export default function Header(props: { active: string }) {
       href: "/streams",
     },
     {
-      name: "GITHUB ↗️",
+      name: "GITHUB",
       href: "https://github.com/LTXland",
+      external: true
     },
   ];
 
@@ -31,7 +32,7 @@ export default function Header(props: { active: string }) {
       <div class="links">
         {items.map((item) => (
           <a href={item.href} class={props.active == item.href ? "active" : ""}>
-            {item.name}
+            {item.name} {item.external ? <span class="arrow">↗️</span> : null}
           </a>
         ))}
       </div>
